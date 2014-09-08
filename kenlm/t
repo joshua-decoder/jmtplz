@@ -1,0 +1,970 @@
+Undefined symbols for architecture x86_64:
+  "util::ParseSize(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)", referenced from:
+      _main in cciyDxve.o
+  "std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::find(char, unsigned long) const", referenced from:
+      util::ParseSize(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) in usage.o
+  "std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::compare(char const*) const", referenced from:
+      util::ParseSize(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) in usage.o
+  "std::__1::__vector_base_common<true>::__throw_length_error() const", referenced from:
+      __ZNSt3__16vectorIyNS_9allocatorIyEEE6assignIPyEENS_9enable_ifIXaasr21__is_forward_iteratorIT_EE5valuesr16is_constructibleIyNS_15iterator_traitsIS7_E9referenceEEE5valueEvE4typeES7_S7_ in binary_format.o
+      std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> >::__append(unsigned long) in binary_format.o
+      std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::vector(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > const&) in model.o
+      void std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> >::__push_back_slow_path<unsigned long long const>(unsigned long long const&) in read_arpa.o
+      void std::__1::vector<util::ProbingHashTable<lm::ngram::RestValue::ProbingEntry, util::IdentityHash, std::__1::equal_to<unsigned long long> >, std::__1::allocator<util::ProbingHashTable<lm::ngram::RestValue::ProbingEntry, util::IdentityHash, std::__1::equal_to<unsigned long long> > > >::__push_back_slow_path<util::ProbingHashTable<lm::ngram::RestValue::ProbingEntry, util::IdentityHash, std::__1::equal_to<unsigned long long> > const>(util::ProbingHashTable<lm::ngram::RestValue::ProbingEntry, util::IdentityHash, std::__1::equal_to<unsigned long long> > const&) in search_hashed.o
+      void std::__1::vector<util::ProbingHashTable<lm::ngram::BackoffValue::ProbingEntry, util::IdentityHash, std::__1::equal_to<unsigned long long> >, std::__1::allocator<util::ProbingHashTable<lm::ngram::BackoffValue::ProbingEntry, util::IdentityHash, std::__1::equal_to<unsigned long long> > > >::__push_back_slow_path<util::ProbingHashTable<lm::ngram::BackoffValue::ProbingEntry, util::IdentityHash, std::__1::equal_to<unsigned long long> > const>(util::ProbingHashTable<lm::ngram::BackoffValue::ProbingEntry, util::IdentityHash, std::__1::equal_to<unsigned long long> > const&) in search_hashed.o
+      void std::__1::vector<lm::RestWeights*, std::__1::allocator<lm::RestWeights*> >::__push_back_slow_path<lm::RestWeights* const>(lm::RestWeights* const&) in search_hashed.o
+      ...
+  "std::__1::__basic_string_common<true>::__throw_length_error() const", referenced from:
+      std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >::str() const in read_arpa.o
+      std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >::str() const in exception.o
+      std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >::str() const in file.o
+      float util::FilePiece::ReadNumber<float>() in file_piece.o
+      double util::FilePiece::ReadNumber<double>() in file_piece.o
+      long util::FilePiece::ReadNumber<long>() in file_piece.o
+      unsigned long util::FilePiece::ReadNumber<unsigned long>() in file_piece.o
+      ...
+  "std::__1::locale::has_facet(std::__1::locale::id&) const", referenced from:
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::basic_filebuf() in usage.o
+  "std::__1::locale::use_facet(std::__1::locale::id&) const", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in bhiksha.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in binary_format.o
+      lm::ngram::detail::(anonymous namespace)::ComplainAboutARPA(lm::ngram::Config const&, lm::ngram::ModelType) in model.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in model.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in quantize.o
+      lm::PositiveProbWarn::Warn(float) in read_arpa.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in read_arpa.o
+      ...
+  "std::__1::ios_base::getloc() const", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in bhiksha.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in binary_format.o
+      lm::ngram::detail::(anonymous namespace)::ComplainAboutARPA(lm::ngram::Config const&, lm::ngram::ModelType) in model.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in model.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in quantize.o
+      lm::PositiveProbWarn::Warn(float) in read_arpa.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in read_arpa.o
+      ...
+  "std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__init(char const*, unsigned long)", referenced from:
+      lm::ReadARPACounts(util::FilePiece&, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> >&) in read_arpa.o
+      void lm::ngram::trie::(anonymous namespace)::RecursiveInsert<lm::ngram::trie::(anonymous namespace)::FindBlanks>(unsigned char, unsigned int, lm::ngram::trie::RecordReader*, std::__1::basic_ostream<char, std::__1::char_traits<char> >*, char const*, lm::ngram::trie::(anonymous namespace)::FindBlanks&) in search_trie.o
+      void lm::ngram::trie::BuildTrie<lm::ngram::DontQuantize, lm::ngram::trie::DontBhiksha>(lm::ngram::trie::SortedFiles&, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> >&, lm::ngram::Config const&, lm::ngram::trie::TrieSearch<lm::ngram::DontQuantize, lm::ngram::trie::DontBhiksha>&, lm::ngram::DontQuantize&, lm::ngram::SortedVocabulary&, lm::ngram::BinaryFormat&) in search_trie.o
+      void lm::ngram::trie::BuildTrie<lm::ngram::DontQuantize, lm::ngram::trie::ArrayBhiksha>(lm::ngram::trie::SortedFiles&, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> >&, lm::ngram::Config const&, lm::ngram::trie::TrieSearch<lm::ngram::DontQuantize, lm::ngram::trie::ArrayBhiksha>&, lm::ngram::DontQuantize&, lm::ngram::SortedVocabulary&, lm::ngram::BinaryFormat&) in search_trie.o
+      void lm::ngram::trie::BuildTrie<lm::ngram::SeparatelyQuantize, lm::ngram::trie::DontBhiksha>(lm::ngram::trie::SortedFiles&, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> >&, lm::ngram::Config const&, lm::ngram::trie::TrieSearch<lm::ngram::SeparatelyQuantize, lm::ngram::trie::DontBhiksha>&, lm::ngram::SeparatelyQuantize&, lm::ngram::SortedVocabulary&, lm::ngram::BinaryFormat&) in search_trie.o
+      void lm::ngram::trie::BuildTrie<lm::ngram::SeparatelyQuantize, lm::ngram::trie::ArrayBhiksha>(lm::ngram::trie::SortedFiles&, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> >&, lm::ngram::Config const&, lm::ngram::trie::TrieSearch<lm::ngram::SeparatelyQuantize, lm::ngram::trie::ArrayBhiksha>&, lm::ngram::SeparatelyQuantize&, lm::ngram::SortedVocabulary&, lm::ngram::BinaryFormat&) in search_trie.o
+      void std::__1::__insertion_sort_3<util::SizedCompare<lm::ngram::trie::EntryCompare, util::SizedProxy>&, util::ProxyIterator<util::SizedProxy> >(util::ProxyIterator<util::SizedProxy>, util::ProxyIterator<util::SizedProxy>, util::SizedCompare<lm::ngram::trie::EntryCompare, util::SizedProxy>&) in search_trie.o
+      ...
+  "std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__init(char const*, unsigned long, unsigned long)", referenced from:
+      util::FilePiece::FilePiece(int, char const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >*, unsigned long) in file_piece.o
+      std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > std::__1::operator+<char, std::__1::char_traits<char>, std::__1::allocator<char> >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, char const*) in file_piece.o
+  "std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__init(unsigned long, char)", referenced from:
+      std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char) in bhiksha.o
+      std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char) in binary_format.o
+      std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char) in model.o
+      std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char) in quantize.o
+      std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char) in read_arpa.o
+      std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char) in search_hashed.o
+      std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char) in search_trie.o
+      ...
+  "std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::append(char const*)", referenced from:
+      util::MakeTemp(StringPiece const&) in file.o
+  "std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::append(char const*, unsigned long)", referenced from:
+      lm::ngram::WriteWordsWrapper::Add(unsigned int, StringPiece const&) in vocab.o
+      util::NameFromFD(int)   in file.o
+      util::FilePiece::FilePiece(int, char const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >*, unsigned long) in file_piece.o
+      std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > std::__1::operator+<char, std::__1::char_traits<char>, std::__1::allocator<char> >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, char const*) in file_piece.o
+  "std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::assign(char const*)", referenced from:
+      lm::ngram::trie::TrieSearch<lm::ngram::DontQuantize, lm::ngram::trie::DontBhiksha>::InitializeFromARPA(char const*, util::FilePiece&, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> >&, lm::ngram::Config const&, lm::ngram::SortedVocabulary&, lm::ngram::BinaryFormat&) in search_trie.o
+      lm::ngram::trie::TrieSearch<lm::ngram::DontQuantize, lm::ngram::trie::ArrayBhiksha>::InitializeFromARPA(char const*, util::FilePiece&, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> >&, lm::ngram::Config const&, lm::ngram::SortedVocabulary&, lm::ngram::BinaryFormat&) in search_trie.o
+      lm::ngram::trie::TrieSearch<lm::ngram::SeparatelyQuantize, lm::ngram::trie::DontBhiksha>::InitializeFromARPA(char const*, util::FilePiece&, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> >&, lm::ngram::Config const&, lm::ngram::SortedVocabulary&, lm::ngram::BinaryFormat&) in search_trie.o
+      lm::ngram::trie::TrieSearch<lm::ngram::SeparatelyQuantize, lm::ngram::trie::ArrayBhiksha>::InitializeFromARPA(char const*, util::FilePiece&, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> >&, lm::ngram::Config const&, lm::ngram::SortedVocabulary&, lm::ngram::BinaryFormat&) in search_trie.o
+      util::NameFromFD(int)   in file.o
+      util::FilePiece::Initialize(char const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >*, unsigned long) in file_piece.o
+      util::FilePiece::FilePiece(std::__1::basic_istream<char, std::__1::char_traits<char> >&, char const*, unsigned long) in file_piece.o
+      ...
+  "std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::resize(unsigned long, char)", referenced from:
+      std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >::overflow(int) in read_arpa.o
+      std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >::str(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) in read_arpa.o
+      lm::ngram::(anonymous namespace)::ReadWords(int, lm::EnumerateVocab*, unsigned int, unsigned long long) in vocab.o
+      std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >::str(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) in exception.o
+      std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >::overflow(int) in exception.o
+      util::NameFromFD(int)   in file.o
+      std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >::overflow(int) in file.o
+      ...
+  "std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::reserve(unsigned long)", referenced from:
+      lm::ngram::(anonymous namespace)::ReadWords(int, lm::EnumerateVocab*, unsigned int, unsigned long long) in vocab.o
+  "std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::push_back(char)", referenced from:
+      std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >::overflow(int) in read_arpa.o
+      lm::ngram::WriteWordsWrapper::Add(unsigned int, StringPiece const&) in vocab.o
+      lm::ngram::(anonymous namespace)::ReadWords(int, lm::EnumerateVocab*, unsigned int, unsigned long long) in vocab.o
+      std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >::overflow(int) in exception.o
+      util::NormalizeTempPrefix(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&) in file.o
+      util::MakeTemp(StringPiece const&) in file.o
+      std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >::overflow(int) in file.o
+      ...
+  "std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::basic_string(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)", referenced from:
+      std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::vector(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > const&) in model.o
+      std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::vector(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > const&) in value_build.o
+      util::NameFromFD(int)   in file.o
+      util::SizeOrThrow(int)   in file.o
+      util::ResizeOrThrow(int, unsigned long long) in file.o
+      util::PartialRead(int, void*, unsigned long) in file.o
+      util::WriteOrThrow(int, void const*, unsigned long) in file.o
+      ...
+  "std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_string()", referenced from:
+      std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char) in bhiksha.o
+      std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char) in binary_format.o
+      lm::ngram::detail::GenericModel<lm::ngram::detail::HashedSearch<lm::ngram::BackoffValue>, lm::ngram::ProbingVocabulary>::GenericModel(char const*, lm::ngram::Config const&) in model.o
+      lm::ngram::detail::GenericModel<lm::ngram::detail::HashedSearch<lm::ngram::RestValue>, lm::ngram::ProbingVocabulary>::GenericModel(char const*, lm::ngram::Config const&) in model.o
+      lm::ngram::detail::GenericModel<lm::ngram::trie::TrieSearch<lm::ngram::DontQuantize, lm::ngram::trie::DontBhiksha>, lm::ngram::SortedVocabulary>::GenericModel(char const*, lm::ngram::Config const&) in model.o
+      lm::ngram::detail::GenericModel<lm::ngram::trie::TrieSearch<lm::ngram::DontQuantize, lm::ngram::trie::ArrayBhiksha>, lm::ngram::SortedVocabulary>::GenericModel(char const*, lm::ngram::Config const&) in model.o
+      lm::ngram::detail::GenericModel<lm::ngram::trie::TrieSearch<lm::ngram::SeparatelyQuantize, lm::ngram::trie::DontBhiksha>, lm::ngram::SortedVocabulary>::GenericModel(char const*, lm::ngram::Config const&) in model.o
+      ...
+  "std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::operator=(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)", referenced from:
+      std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >::str(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) in read_arpa.o
+      util::Exception::what() const in exception.o
+      util::Exception::SetLocation(char const*, unsigned int, char const*, char const*, char const*) in exception.o
+      std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >::str(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) in exception.o
+      std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >::str(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) in file.o
+      std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >::str(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) in usage.o
+  "std::__1::basic_istream<char, std::__1::char_traits<char> >::read(char*, long)", referenced from:
+      util::(anonymous namespace)::IStreamReader::Read(void*, unsigned long, util::ReadCompressed&) in read_compressed.o
+  "std::__1::basic_istream<char, std::__1::char_traits<char> >::sentry::sentry(std::__1::basic_istream<char, std::__1::char_traits<char> >&, bool)", referenced from:
+      std::__1::basic_istream<char, std::__1::char_traits<char> >& std::__1::operator>><char, std::__1::char_traits<char>, std::__1::allocator<char> >(std::__1::basic_istream<char, std::__1::char_traits<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&) in usage.o
+      std::__1::basic_istream<char, std::__1::char_traits<char> >& std::__1::getline<char, std::__1::char_traits<char>, std::__1::allocator<char> >(std::__1::basic_istream<char, std::__1::char_traits<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, char) in usage.o
+  "std::__1::basic_istream<char, std::__1::char_traits<char> >::~basic_istream()", referenced from:
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_ifstream<char, std::__1::char_traits<char> > in usage.o
+  "std::__1::basic_istream<char, std::__1::char_traits<char> >::~basic_istream()", referenced from:
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_ifstream<char, std::__1::char_traits<char> > in usage.o
+  "std::__1::basic_istream<char, std::__1::char_traits<char> >::~basic_istream()", referenced from:
+      util::PrintUsage(std::__1::basic_ostream<char, std::__1::char_traits<char> >&) in usage.o
+      std::__1::basic_ifstream<char, std::__1::char_traits<char> >::~basic_ifstream() in usage.o
+      virtual thunk to std::__1::basic_ifstream<char, std::__1::char_traits<char> >::~basic_ifstream() in usage.o
+      virtual thunk to std::__1::basic_ifstream<char, std::__1::char_traits<char> >::~basic_ifstream() in usage.o
+  "std::__1::basic_istream<char, std::__1::char_traits<char> >::operator>>(double&)", referenced from:
+      util::ParseSize(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) in usage.o
+  "std::__1::basic_istream<char, std::__1::char_traits<char> >::operator>>(unsigned long long&)", referenced from:
+      lm::ReadARPACounts(util::FilePiece&, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> >&) in read_arpa.o
+      util::ParseSize(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) in usage.o
+  "std::__1::basic_ostream<char, std::__1::char_traits<char> >::put(char)", referenced from:
+      lm::ngram::detail::(anonymous namespace)::ComplainAboutARPA(lm::ngram::Config const&, lm::ngram::ModelType) in model.o
+      lm::PositiveProbWarn::Warn(float) in read_arpa.o
+      lm::ngram::MissingUnknown(lm::ngram::Config const&) in vocab.o
+      util::ErsatzProgress::Milestone()     in ersatz_progress.o
+      util::scoped_fd::~scoped_fd() in file.o
+      util::scoped_FILE::~scoped_FILE() in file.o
+      util::FilePiece::Initialize(char const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >*, unsigned long) in file_piece.o
+      ...
+  "std::__1::basic_ostream<char, std::__1::char_traits<char> >::flush()", referenced from:
+      lm::ngram::detail::(anonymous namespace)::ComplainAboutARPA(lm::ngram::Config const&, lm::ngram::ModelType) in model.o
+      lm::PositiveProbWarn::Warn(float) in read_arpa.o
+      lm::ngram::MissingUnknown(lm::ngram::Config const&) in vocab.o
+      util::ErsatzProgress::Milestone()     in ersatz_progress.o
+      util::scoped_fd::~scoped_fd() in file.o
+      util::scoped_FILE::~scoped_FILE() in file.o
+      util::FilePiece::Initialize(char const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >*, unsigned long) in file_piece.o
+      ...
+  "std::__1::basic_ostream<char, std::__1::char_traits<char> >::write(char const*, long)", referenced from:
+      lm::ReadARPACounts(util::FilePiece&, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> >&) in read_arpa.o
+      lm::ReadNGramHeader(util::FilePiece&, unsigned int) in read_arpa.o
+      lm::ReadEnd(util::FilePiece&)      in read_arpa.o
+      util::MakeTemp(StringPiece const&) in file.o
+      util::ParseNumberException::ParseNumberException(StringPiece) in file_piece.o
+      util::ParseNumberException::ParseNumberException(StringPiece) in file_piece.o
+      float util::FilePiece::ReadNumber<float>() in file_piece.o
+      ...
+  "std::__1::basic_ostream<char, std::__1::char_traits<char> >::sentry::sentry(std::__1::basic_ostream<char, std::__1::char_traits<char> >&)", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in bhiksha.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in binary_format.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in model.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in quantize.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in read_arpa.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char) in read_arpa.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <char, std::__1::char_traits<char>, std::__1::allocator<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) in read_arpa.o
+      ...
+  "std::__1::basic_ostream<char, std::__1::char_traits<char> >::sentry::~sentry()", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in bhiksha.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in binary_format.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in model.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in quantize.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in read_arpa.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char) in read_arpa.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <char, std::__1::char_traits<char>, std::__1::allocator<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) in read_arpa.o
+      ...
+  "std::__1::basic_ostream<char, std::__1::char_traits<char> >::~basic_ostream()", referenced from:
+      construction vtable for std::__1::basic_ostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      construction vtable for std::__1::basic_ostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      construction vtable for std::__1::basic_ostream<char, std::__1::char_traits<char> >-in-std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in file.o
+      construction vtable for std::__1::basic_ostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+  "std::__1::basic_ostream<char, std::__1::char_traits<char> >::~basic_ostream()", referenced from:
+      construction vtable for std::__1::basic_ostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      construction vtable for std::__1::basic_ostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      construction vtable for std::__1::basic_ostream<char, std::__1::char_traits<char> >-in-std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in file.o
+      construction vtable for std::__1::basic_ostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+  "std::__1::basic_ostream<char, std::__1::char_traits<char> >::~basic_ostream()", referenced from:
+      util::NameFromFD(int)   in file.o
+      std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_ostringstream() in file.o
+  "std::__1::basic_ostream<char, std::__1::char_traits<char> >::operator<<(double)", referenced from:
+      util::PrintUsage(std::__1::basic_ostream<char, std::__1::char_traits<char> >&) in usage.o
+  "std::__1::basic_ostream<char, std::__1::char_traits<char> >::operator<<(float)", referenced from:
+      lm::ngram::ReadHeader(int, lm::ngram::Parameters&) in binary_format.o
+      lm::ReadBackoff(util::FilePiece&, lm::Prob&)      in read_arpa.o
+      lm::ReadBackoff(util::FilePiece&, float&) in read_arpa.o
+      lm::PositiveProbWarn::Warn(float) in read_arpa.o
+      lm::ngram::ShowSizes(std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> > const&, lm::ngram::Config const&) in sizes.o
+      lm::ngram::MissingUnknown(lm::ngram::Config const&) in vocab.o
+  "std::__1::basic_ostream<char, std::__1::char_traits<char> >::operator<<(int)", referenced from:
+      lm::ngram::detail::(anonymous namespace)::CheckCounts(std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> > const&) in model.o
+      lm::ngram::LoadVirtual(char const*, lm::ngram::Config const&, lm::ngram::ModelType) in model.o
+      util::scoped_fd::~scoped_fd() in file.o
+      util::NameFromFD(int)   in file.o
+      util::(anonymous namespace)::InternalSeek(int, long long, int) in file.o
+      util::(anonymous namespace)::StreamCompressed<util::(anonymous namespace)::GZip>::Read(void*, unsigned long, util::ReadCompressed&) in read_compressed.o
+  "std::__1::basic_ostream<char, std::__1::char_traits<char> >::operator<<(unsigned int)", referenced from:
+      lm::ngram::trie::ArrayBhiksha::UpdateConfigFromBinary(lm::ngram::BinaryFormat const&, unsigned long long, lm::ngram::Config&) in bhiksha.o
+      lm::ngram::MatchCheck(lm::ngram::ModelType, unsigned int, lm::ngram::Parameters const&) in binary_format.o
+      lm::ngram::SeparatelyQuantize::UpdateConfigFromBinary(lm::ngram::BinaryFormat const&, unsigned long long, lm::ngram::Config&) in quantize.o
+      lm::ngram::SeparatelyQuantize::SetupMemory(void*, unsigned char, lm::ngram::Config const&) in quantize.o
+      lm::ReadNGramHeader(util::FilePiece&, unsigned int) in read_arpa.o
+      lm::ngram::(anonymous namespace)::ActivateLowerMiddle<util::ProbingHashTable<lm::ngram::RestValue::ProbingEntry, util::IdentityHash, std::__1::equal_to<unsigned long long> > >::operator()(unsigned int const*, unsigned int) in search_hashed.o
+      lm::ngram::(anonymous namespace)::ActivateLowerMiddle<util::ProbingHashTable<lm::ngram::BackoffValue::ProbingEntry, util::IdentityHash, std::__1::equal_to<unsigned long long> > >::operator()(unsigned int const*, unsigned int) in search_hashed.o
+      ...
+  "std::__1::basic_ostream<char, std::__1::char_traits<char> >::operator<<(long)", referenced from:
+      lm::ngram::IsBinaryFormat(int)  in binary_format.o
+      lm::ngram::detail::GenericModel<lm::ngram::detail::HashedSearch<lm::ngram::BackoffValue>, lm::ngram::ProbingVocabulary>::SetupMemory(void*, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> > const&, lm::ngram::Config const&) in model.o
+      lm::ngram::detail::GenericModel<lm::ngram::detail::HashedSearch<lm::ngram::RestValue>, lm::ngram::ProbingVocabulary>::SetupMemory(void*, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> > const&, lm::ngram::Config const&) in model.o
+      lm::ngram::detail::GenericModel<lm::ngram::trie::TrieSearch<lm::ngram::DontQuantize, lm::ngram::trie::DontBhiksha>, lm::ngram::SortedVocabulary>::SetupMemory(void*, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> > const&, lm::ngram::Config const&) in model.o
+      lm::ngram::detail::GenericModel<lm::ngram::trie::TrieSearch<lm::ngram::DontQuantize, lm::ngram::trie::ArrayBhiksha>, lm::ngram::SortedVocabulary>::SetupMemory(void*, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> > const&, lm::ngram::Config const&) in model.o
+      lm::ngram::detail::GenericModel<lm::ngram::trie::TrieSearch<lm::ngram::SeparatelyQuantize, lm::ngram::trie::DontBhiksha>, lm::ngram::SortedVocabulary>::SetupMemory(void*, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> > const&, lm::ngram::Config const&) in model.o
+      lm::ngram::detail::GenericModel<lm::ngram::trie::TrieSearch<lm::ngram::SeparatelyQuantize, lm::ngram::trie::ArrayBhiksha>, lm::ngram::SortedVocabulary>::SetupMemory(void*, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> > const&, lm::ngram::Config const&) in model.o
+      ...
+  "std::__1::basic_ostream<char, std::__1::char_traits<char> >::operator<<(unsigned long)", referenced from:
+      lm::ngram::detail::(anonymous namespace)::CheckCounts(std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> > const&) in model.o
+      lm::ngram::detail::GenericModel<lm::ngram::detail::HashedSearch<lm::ngram::BackoffValue>, lm::ngram::ProbingVocabulary>::SetupMemory(void*, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> > const&, lm::ngram::Config const&) in model.o
+      lm::ngram::detail::GenericModel<lm::ngram::detail::HashedSearch<lm::ngram::RestValue>, lm::ngram::ProbingVocabulary>::SetupMemory(void*, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> > const&, lm::ngram::Config const&) in model.o
+      lm::ngram::detail::GenericModel<lm::ngram::trie::TrieSearch<lm::ngram::DontQuantize, lm::ngram::trie::DontBhiksha>, lm::ngram::SortedVocabulary>::SetupMemory(void*, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> > const&, lm::ngram::Config const&) in model.o
+      lm::ngram::detail::GenericModel<lm::ngram::trie::TrieSearch<lm::ngram::DontQuantize, lm::ngram::trie::ArrayBhiksha>, lm::ngram::SortedVocabulary>::SetupMemory(void*, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> > const&, lm::ngram::Config const&) in model.o
+      lm::ngram::detail::GenericModel<lm::ngram::trie::TrieSearch<lm::ngram::SeparatelyQuantize, lm::ngram::trie::DontBhiksha>, lm::ngram::SortedVocabulary>::SetupMemory(void*, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> > const&, lm::ngram::Config const&) in model.o
+      lm::ngram::detail::GenericModel<lm::ngram::trie::TrieSearch<lm::ngram::SeparatelyQuantize, lm::ngram::trie::ArrayBhiksha>, lm::ngram::SortedVocabulary>::SetupMemory(void*, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> > const&, lm::ngram::Config const&) in model.o
+      ...
+  "std::__1::basic_ostream<char, std::__1::char_traits<char> >::operator<<(long long)", referenced from:
+      util::(anonymous namespace)::InternalSeek(int, long long, int) in file.o
+  "std::__1::basic_ostream<char, std::__1::char_traits<char> >::operator<<(unsigned long long)", referenced from:
+      lm::ngram::BinaryFormat::LoadBinary(unsigned long) in binary_format.o
+      lm::ngram::detail::GenericModel<lm::ngram::detail::HashedSearch<lm::ngram::BackoffValue>, lm::ngram::ProbingVocabulary>::InitializeFromARPA(int, char const*, lm::ngram::Config const&) in model.o
+      lm::ngram::detail::GenericModel<lm::ngram::detail::HashedSearch<lm::ngram::RestValue>, lm::ngram::ProbingVocabulary>::InitializeFromARPA(int, char const*, lm::ngram::Config const&) in model.o
+      lm::ngram::detail::GenericModel<lm::ngram::trie::TrieSearch<lm::ngram::DontQuantize, lm::ngram::trie::DontBhiksha>, lm::ngram::SortedVocabulary>::InitializeFromARPA(int, char const*, lm::ngram::Config const&) in model.o
+      lm::ngram::detail::GenericModel<lm::ngram::trie::TrieSearch<lm::ngram::DontQuantize, lm::ngram::trie::ArrayBhiksha>, lm::ngram::SortedVocabulary>::InitializeFromARPA(int, char const*, lm::ngram::Config const&) in model.o
+      lm::ngram::detail::GenericModel<lm::ngram::trie::TrieSearch<lm::ngram::SeparatelyQuantize, lm::ngram::trie::DontBhiksha>, lm::ngram::SortedVocabulary>::InitializeFromARPA(int, char const*, lm::ngram::Config const&) in model.o
+      lm::ngram::detail::GenericModel<lm::ngram::trie::TrieSearch<lm::ngram::SeparatelyQuantize, lm::ngram::trie::ArrayBhiksha>, lm::ngram::SortedVocabulary>::InitializeFromARPA(int, char const*, lm::ngram::Config const&) in model.o
+      ...
+  "std::__1::basic_iostream<char, std::__1::char_traits<char> >::~basic_iostream()", referenced from:
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+  "std::__1::basic_iostream<char, std::__1::char_traits<char> >::~basic_iostream()", referenced from:
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+  "std::__1::basic_iostream<char, std::__1::char_traits<char> >::~basic_iostream()", referenced from:
+      lm::ReadARPACounts(util::FilePiece&, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> >&) in read_arpa.o
+      lm::ReadNGramHeader(util::FilePiece&, unsigned int) in read_arpa.o
+      std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_stringstream() in read_arpa.o
+      util::Exception::Exception() in exception.o
+      util::Exception::Exception(util::Exception const&) in exception.o
+      std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_stringstream() in exception.o
+      util::ParseSize(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) in usage.o
+      ...
+  "std::__1::basic_streambuf<char, std::__1::char_traits<char> >::sync()", referenced from:
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in file.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+  "std::__1::basic_streambuf<char, std::__1::char_traits<char> >::imbue(std::__1::locale const&)", referenced from:
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in file.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+  "std::__1::basic_streambuf<char, std::__1::char_traits<char> >::uflow()", referenced from:
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in file.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+      vtable for std::__1::basic_filebuf<char, std::__1::char_traits<char> > in usage.o
+  "std::__1::basic_streambuf<char, std::__1::char_traits<char> >::setbuf(char*, long)", referenced from:
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in file.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+  "std::__1::basic_streambuf<char, std::__1::char_traits<char> >::xsgetn(char*, long)", referenced from:
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in file.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+      vtable for std::__1::basic_filebuf<char, std::__1::char_traits<char> > in usage.o
+  "std::__1::basic_streambuf<char, std::__1::char_traits<char> >::xsputn(char const*, long)", referenced from:
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in file.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+      vtable for std::__1::basic_filebuf<char, std::__1::char_traits<char> > in usage.o
+  "std::__1::basic_streambuf<char, std::__1::char_traits<char> >::showmanyc()", referenced from:
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in file.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+      vtable for std::__1::basic_filebuf<char, std::__1::char_traits<char> > in usage.o
+  "std::__1::basic_streambuf<char, std::__1::char_traits<char> >::basic_streambuf()", referenced from:
+      lm::ReadARPACounts(util::FilePiece&, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> >&) in read_arpa.o
+      lm::ReadNGramHeader(util::FilePiece&, unsigned int) in read_arpa.o
+      util::Exception::Exception() in exception.o
+      util::Exception::Exception(util::Exception const&) in exception.o
+      util::NameFromFD(int)   in file.o
+      util::ParseSize(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) in usage.o
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::basic_filebuf() in usage.o
+      ...
+  "std::__1::basic_streambuf<char, std::__1::char_traits<char> >::~basic_streambuf()", referenced from:
+      lm::ReadARPACounts(util::FilePiece&, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> >&) in read_arpa.o
+      lm::ReadNGramHeader(util::FilePiece&, unsigned int) in read_arpa.o
+      std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_stringstream() in read_arpa.o
+      std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_stringbuf() in read_arpa.o
+      std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_stringbuf() in read_arpa.o
+      util::Exception::Exception() in exception.o
+      util::Exception::Exception(util::Exception const&) in exception.o
+      ...
+  "std::__1::cerr", referenced from:
+      lm::ngram::Config::Config() in config.o
+      lm::ngram::Config::Config() in config.o
+      lm::PositiveProbWarn::Warn(float) in read_arpa.o
+      lm::ngram::ShowSizes(std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> > const&, lm::ngram::Config const&) in sizes.o
+      util::scoped_fd::~scoped_fd() in file.o
+      util::scoped_FILE::~scoped_FILE() in file.o
+      util::scoped_mmap::~scoped_mmap() in mmap.o
+      ...
+  "std::__1::ctype<char>::id", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in bhiksha.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in binary_format.o
+      lm::ngram::detail::(anonymous namespace)::ComplainAboutARPA(lm::ngram::Config const&, lm::ngram::ModelType) in model.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in model.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in quantize.o
+      lm::PositiveProbWarn::Warn(float) in read_arpa.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in read_arpa.o
+      ...
+  "void std::__1::__sort<std::__1::__less<float, float>&, float*>(float*, float*, std::__1::__less<float, float>&)", referenced from:
+      lm::ngram::SeparatelyQuantize::Train(unsigned char, std::__1::vector<float, std::__1::allocator<float> >&, std::__1::vector<float, std::__1::allocator<float> >&) in quantize.o
+      lm::ngram::SeparatelyQuantize::TrainProb(unsigned char, std::__1::vector<float, std::__1::allocator<float> >&) in quantize.o
+  "std::__1::locale::locale(std::__1::locale const&)", referenced from:
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::basic_filebuf() in usage.o
+  "std::__1::locale::~locale()", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in bhiksha.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in binary_format.o
+      lm::ngram::detail::(anonymous namespace)::ComplainAboutARPA(lm::ngram::Config const&, lm::ngram::ModelType) in model.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in model.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in quantize.o
+      lm::PositiveProbWarn::Warn(float) in read_arpa.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in read_arpa.o
+      ...
+  "std::__1::codecvt<char, char, __mbstate_t>::id", referenced from:
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::imbue(std::__1::locale const&) in usage.o
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::basic_filebuf() in usage.o
+  "std::__1::ios_base::__set_badbit_and_consider_rethrow()", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in bhiksha.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in binary_format.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in model.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in quantize.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in read_arpa.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char) in read_arpa.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <char, std::__1::char_traits<char>, std::__1::allocator<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) in read_arpa.o
+      ...
+  "std::__1::ios_base::init(void*)", referenced from:
+      lm::ReadARPACounts(util::FilePiece&, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> >&) in read_arpa.o
+      lm::ReadNGramHeader(util::FilePiece&, unsigned int) in read_arpa.o
+      util::Exception::Exception() in exception.o
+      util::Exception::Exception(util::Exception const&) in exception.o
+      util::NameFromFD(int)   in file.o
+      util::PrintUsage(std::__1::basic_ostream<char, std::__1::char_traits<char> >&) in usage.o
+      util::ParseSize(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) in usage.o
+      ...
+  "std::__1::ios_base::clear(unsigned int)", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in bhiksha.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in binary_format.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in model.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in quantize.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in read_arpa.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char) in read_arpa.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <char, std::__1::char_traits<char>, std::__1::allocator<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) in read_arpa.o
+      ...
+  "std::__1::basic_ios<char, std::__1::char_traits<char> >::~basic_ios()", referenced from:
+      lm::ReadARPACounts(util::FilePiece&, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> >&) in read_arpa.o
+      lm::ReadNGramHeader(util::FilePiece&, unsigned int) in read_arpa.o
+      std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_stringstream() in read_arpa.o
+      std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_stringstream() in read_arpa.o
+      non-virtual thunk to std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_stringstream() in read_arpa.o
+      non-virtual thunk to std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_stringstream() in read_arpa.o
+      virtual thunk to std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_stringstream() in read_arpa.o
+      ...
+  "std::bad_cast::bad_cast()", referenced from:
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::seekoff(long long, std::__1::ios_base::seekdir, unsigned int) in usage.o
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::sync() in usage.o
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::underflow() in usage.o
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::overflow(int) in usage.o
+  "std::bad_alloc::bad_alloc()", referenced from:
+      util::(anonymous namespace)::ReadFactory(int, unsigned long long&, void const*, unsigned long, bool) in read_compressed.o
+  "typeinfo for std::__1::basic_istream<char, std::__1::char_traits<char> >", referenced from:
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_ifstream<char, std::__1::char_traits<char> > in usage.o
+      typeinfo for std::__1::basic_ifstream<char, std::__1::char_traits<char> > in usage.o
+  "typeinfo for std::__1::basic_ostream<char, std::__1::char_traits<char> >", referenced from:
+      construction vtable for std::__1::basic_ostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      construction vtable for std::__1::basic_ostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      construction vtable for std::__1::basic_ostream<char, std::__1::char_traits<char> >-in-std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in file.o
+      typeinfo for std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in file.o
+      construction vtable for std::__1::basic_ostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+  "typeinfo for std::__1::basic_iostream<char, std::__1::char_traits<char> >", referenced from:
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      typeinfo for std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      typeinfo for std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+      typeinfo for std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+  "typeinfo for std::__1::basic_streambuf<char, std::__1::char_traits<char> >", referenced from:
+      typeinfo for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      typeinfo for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      typeinfo for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in file.o
+      typeinfo for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+      typeinfo for std::__1::basic_filebuf<char, std::__1::char_traits<char> > in usage.o
+  "non-virtual thunk to std::__1::basic_iostream<char, std::__1::char_traits<char> >::~basic_iostream()", referenced from:
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+  "non-virtual thunk to std::__1::basic_iostream<char, std::__1::char_traits<char> >::~basic_iostream()", referenced from:
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+  "virtual thunk to std::__1::basic_istream<char, std::__1::char_traits<char> >::~basic_istream()", referenced from:
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_ifstream<char, std::__1::char_traits<char> > in usage.o
+  "virtual thunk to std::__1::basic_istream<char, std::__1::char_traits<char> >::~basic_istream()", referenced from:
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_ifstream<char, std::__1::char_traits<char> > in usage.o
+  "virtual thunk to std::__1::basic_ostream<char, std::__1::char_traits<char> >::~basic_ostream()", referenced from:
+      construction vtable for std::__1::basic_ostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      construction vtable for std::__1::basic_ostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      construction vtable for std::__1::basic_ostream<char, std::__1::char_traits<char> >-in-std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in file.o
+      construction vtable for std::__1::basic_ostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+  "virtual thunk to std::__1::basic_ostream<char, std::__1::char_traits<char> >::~basic_ostream()", referenced from:
+      construction vtable for std::__1::basic_ostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      construction vtable for std::__1::basic_ostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      construction vtable for std::__1::basic_ostream<char, std::__1::char_traits<char> >-in-std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in file.o
+      construction vtable for std::__1::basic_ostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+  "virtual thunk to std::__1::basic_iostream<char, std::__1::char_traits<char> >::~basic_iostream()", referenced from:
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+  "virtual thunk to std::__1::basic_iostream<char, std::__1::char_traits<char> >::~basic_iostream()", referenced from:
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+ld: symbol(s) not found for architecture x86_64
+collect2: error: ld returned 1 exit status
+make: *** [build_binary] Error 1
+make: *** Waiting for unfinished jobs....
+Undefined symbols for architecture x86_64:
+  "util::PrintUsage(std::basic_ostream<char, std::char_traits<char> >&)", referenced from:
+      _main in ccW6m28m.o
+  "util::FilePiece::FilePiece(int, char const*, std::basic_ostream<char, std::char_traits<char> >*, unsigned long)", referenced from:
+      void lm::ngram::Query<lm::ngram::ProbingModel, lm::ngram::FullPrint>(lm::ngram::ProbingModel const&, bool) in ccW6m28m.o
+      void lm::ngram::Query<lm::ngram::ProbingModel, lm::ngram::BasicPrint>(lm::ngram::ProbingModel const&, bool) in ccW6m28m.o
+      void lm::ngram::Query<lm::ngram::RestProbingModel, lm::ngram::FullPrint>(lm::ngram::RestProbingModel const&, bool) in ccW6m28m.o
+      void lm::ngram::Query<lm::ngram::RestProbingModel, lm::ngram::BasicPrint>(lm::ngram::RestProbingModel const&, bool) in ccW6m28m.o
+      void lm::ngram::Query<lm::ngram::TrieModel, lm::ngram::FullPrint>(lm::ngram::TrieModel const&, bool) in ccW6m28m.o
+      void lm::ngram::Query<lm::ngram::TrieModel, lm::ngram::BasicPrint>(lm::ngram::TrieModel const&, bool) in ccW6m28m.o
+      void lm::ngram::Query<lm::ngram::QuantTrieModel, lm::ngram::FullPrint>(lm::ngram::QuantTrieModel const&, bool) in ccW6m28m.o
+      ...
+  "std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::find(char, unsigned long) const", referenced from:
+      util::ParseSize(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) in usage.o
+  "std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::compare(char const*) const", referenced from:
+      util::ParseSize(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) in usage.o
+  "std::__1::__vector_base_common<true>::__throw_length_error() const", referenced from:
+      __ZNSt3__16vectorIyNS_9allocatorIyEEE6assignIPyEENS_9enable_ifIXaasr21__is_forward_iteratorIT_EE5valuesr16is_constructibleIyNS_15iterator_traitsIS7_E9referenceEEE5valueEvE4typeES7_S7_ in binary_format.o
+      std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> >::__append(unsigned long) in binary_format.o
+      std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::vector(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > const&) in model.o
+      void std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> >::__push_back_slow_path<unsigned long long const>(unsigned long long const&) in read_arpa.o
+      void std::__1::vector<util::ProbingHashTable<lm::ngram::RestValue::ProbingEntry, util::IdentityHash, std::__1::equal_to<unsigned long long> >, std::__1::allocator<util::ProbingHashTable<lm::ngram::RestValue::ProbingEntry, util::IdentityHash, std::__1::equal_to<unsigned long long> > > >::__push_back_slow_path<util::ProbingHashTable<lm::ngram::RestValue::ProbingEntry, util::IdentityHash, std::__1::equal_to<unsigned long long> > const>(util::ProbingHashTable<lm::ngram::RestValue::ProbingEntry, util::IdentityHash, std::__1::equal_to<unsigned long long> > const&) in search_hashed.o
+      void std::__1::vector<util::ProbingHashTable<lm::ngram::BackoffValue::ProbingEntry, util::IdentityHash, std::__1::equal_to<unsigned long long> >, std::__1::allocator<util::ProbingHashTable<lm::ngram::BackoffValue::ProbingEntry, util::IdentityHash, std::__1::equal_to<unsigned long long> > > >::__push_back_slow_path<util::ProbingHashTable<lm::ngram::BackoffValue::ProbingEntry, util::IdentityHash, std::__1::equal_to<unsigned long long> > const>(util::ProbingHashTable<lm::ngram::BackoffValue::ProbingEntry, util::IdentityHash, std::__1::equal_to<unsigned long long> > const&) in search_hashed.o
+      void std::__1::vector<lm::RestWeights*, std::__1::allocator<lm::RestWeights*> >::__push_back_slow_path<lm::RestWeights* const>(lm::RestWeights* const&) in search_hashed.o
+      ...
+  "std::__1::__basic_string_common<true>::__throw_length_error() const", referenced from:
+      std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >::str() const in read_arpa.o
+      std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >::str() const in exception.o
+      std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >::str() const in file.o
+      float util::FilePiece::ReadNumber<float>() in file_piece.o
+      double util::FilePiece::ReadNumber<double>() in file_piece.o
+      long util::FilePiece::ReadNumber<long>() in file_piece.o
+      unsigned long util::FilePiece::ReadNumber<unsigned long>() in file_piece.o
+      ...
+  "std::__1::locale::has_facet(std::__1::locale::id&) const", referenced from:
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::basic_filebuf() in usage.o
+  "std::__1::locale::use_facet(std::__1::locale::id&) const", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in bhiksha.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in binary_format.o
+      lm::ngram::detail::(anonymous namespace)::ComplainAboutARPA(lm::ngram::Config const&, lm::ngram::ModelType) in model.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in model.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in quantize.o
+      lm::PositiveProbWarn::Warn(float) in read_arpa.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in read_arpa.o
+      ...
+  "std::__1::ios_base::getloc() const", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in bhiksha.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in binary_format.o
+      lm::ngram::detail::(anonymous namespace)::ComplainAboutARPA(lm::ngram::Config const&, lm::ngram::ModelType) in model.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in model.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in quantize.o
+      lm::PositiveProbWarn::Warn(float) in read_arpa.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in read_arpa.o
+      ...
+  "std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__init(char const*, unsigned long)", referenced from:
+      lm::ReadARPACounts(util::FilePiece&, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> >&) in read_arpa.o
+      void lm::ngram::trie::(anonymous namespace)::RecursiveInsert<lm::ngram::trie::(anonymous namespace)::FindBlanks>(unsigned char, unsigned int, lm::ngram::trie::RecordReader*, std::__1::basic_ostream<char, std::__1::char_traits<char> >*, char const*, lm::ngram::trie::(anonymous namespace)::FindBlanks&) in search_trie.o
+      void lm::ngram::trie::BuildTrie<lm::ngram::DontQuantize, lm::ngram::trie::DontBhiksha>(lm::ngram::trie::SortedFiles&, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> >&, lm::ngram::Config const&, lm::ngram::trie::TrieSearch<lm::ngram::DontQuantize, lm::ngram::trie::DontBhiksha>&, lm::ngram::DontQuantize&, lm::ngram::SortedVocabulary&, lm::ngram::BinaryFormat&) in search_trie.o
+      void lm::ngram::trie::BuildTrie<lm::ngram::DontQuantize, lm::ngram::trie::ArrayBhiksha>(lm::ngram::trie::SortedFiles&, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> >&, lm::ngram::Config const&, lm::ngram::trie::TrieSearch<lm::ngram::DontQuantize, lm::ngram::trie::ArrayBhiksha>&, lm::ngram::DontQuantize&, lm::ngram::SortedVocabulary&, lm::ngram::BinaryFormat&) in search_trie.o
+      void lm::ngram::trie::BuildTrie<lm::ngram::SeparatelyQuantize, lm::ngram::trie::DontBhiksha>(lm::ngram::trie::SortedFiles&, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> >&, lm::ngram::Config const&, lm::ngram::trie::TrieSearch<lm::ngram::SeparatelyQuantize, lm::ngram::trie::DontBhiksha>&, lm::ngram::SeparatelyQuantize&, lm::ngram::SortedVocabulary&, lm::ngram::BinaryFormat&) in search_trie.o
+      void lm::ngram::trie::BuildTrie<lm::ngram::SeparatelyQuantize, lm::ngram::trie::ArrayBhiksha>(lm::ngram::trie::SortedFiles&, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> >&, lm::ngram::Config const&, lm::ngram::trie::TrieSearch<lm::ngram::SeparatelyQuantize, lm::ngram::trie::ArrayBhiksha>&, lm::ngram::SeparatelyQuantize&, lm::ngram::SortedVocabulary&, lm::ngram::BinaryFormat&) in search_trie.o
+      void std::__1::__insertion_sort_3<util::SizedCompare<lm::ngram::trie::EntryCompare, util::SizedProxy>&, util::ProxyIterator<util::SizedProxy> >(util::ProxyIterator<util::SizedProxy>, util::ProxyIterator<util::SizedProxy>, util::SizedCompare<lm::ngram::trie::EntryCompare, util::SizedProxy>&) in search_trie.o
+      ...
+  "std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__init(char const*, unsigned long, unsigned long)", referenced from:
+      util::FilePiece::FilePiece(int, char const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >*, unsigned long) in file_piece.o
+      std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > std::__1::operator+<char, std::__1::char_traits<char>, std::__1::allocator<char> >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, char const*) in file_piece.o
+  "std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__init(unsigned long, char)", referenced from:
+      std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char) in bhiksha.o
+      std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char) in binary_format.o
+      std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char) in model.o
+      std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char) in quantize.o
+      std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char) in read_arpa.o
+      std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char) in search_hashed.o
+      std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char) in search_trie.o
+      ...
+  "std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::append(char const*)", referenced from:
+      util::MakeTemp(StringPiece const&) in file.o
+  "std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::append(char const*, unsigned long)", referenced from:
+      lm::ngram::WriteWordsWrapper::Add(unsigned int, StringPiece const&) in vocab.o
+      util::NameFromFD(int)   in file.o
+      util::FilePiece::FilePiece(int, char const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >*, unsigned long) in file_piece.o
+      std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > std::__1::operator+<char, std::__1::char_traits<char>, std::__1::allocator<char> >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, char const*) in file_piece.o
+  "std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::assign(char const*)", referenced from:
+      lm::ngram::trie::TrieSearch<lm::ngram::DontQuantize, lm::ngram::trie::DontBhiksha>::InitializeFromARPA(char const*, util::FilePiece&, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> >&, lm::ngram::Config const&, lm::ngram::SortedVocabulary&, lm::ngram::BinaryFormat&) in search_trie.o
+      lm::ngram::trie::TrieSearch<lm::ngram::DontQuantize, lm::ngram::trie::ArrayBhiksha>::InitializeFromARPA(char const*, util::FilePiece&, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> >&, lm::ngram::Config const&, lm::ngram::SortedVocabulary&, lm::ngram::BinaryFormat&) in search_trie.o
+      lm::ngram::trie::TrieSearch<lm::ngram::SeparatelyQuantize, lm::ngram::trie::DontBhiksha>::InitializeFromARPA(char const*, util::FilePiece&, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> >&, lm::ngram::Config const&, lm::ngram::SortedVocabulary&, lm::ngram::BinaryFormat&) in search_trie.o
+      lm::ngram::trie::TrieSearch<lm::ngram::SeparatelyQuantize, lm::ngram::trie::ArrayBhiksha>::InitializeFromARPA(char const*, util::FilePiece&, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> >&, lm::ngram::Config const&, lm::ngram::SortedVocabulary&, lm::ngram::BinaryFormat&) in search_trie.o
+      util::NameFromFD(int)   in file.o
+      util::FilePiece::Initialize(char const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >*, unsigned long) in file_piece.o
+      util::FilePiece::FilePiece(std::__1::basic_istream<char, std::__1::char_traits<char> >&, char const*, unsigned long) in file_piece.o
+      ...
+  "std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::resize(unsigned long, char)", referenced from:
+      std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >::overflow(int) in read_arpa.o
+      std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >::str(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) in read_arpa.o
+      lm::ngram::(anonymous namespace)::ReadWords(int, lm::EnumerateVocab*, unsigned int, unsigned long long) in vocab.o
+      std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >::str(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) in exception.o
+      std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >::overflow(int) in exception.o
+      util::NameFromFD(int)   in file.o
+      std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >::overflow(int) in file.o
+      ...
+  "std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::reserve(unsigned long)", referenced from:
+      lm::ngram::(anonymous namespace)::ReadWords(int, lm::EnumerateVocab*, unsigned int, unsigned long long) in vocab.o
+  "std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::push_back(char)", referenced from:
+      std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >::overflow(int) in read_arpa.o
+      lm::ngram::WriteWordsWrapper::Add(unsigned int, StringPiece const&) in vocab.o
+      lm::ngram::(anonymous namespace)::ReadWords(int, lm::EnumerateVocab*, unsigned int, unsigned long long) in vocab.o
+      std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >::overflow(int) in exception.o
+      util::NormalizeTempPrefix(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&) in file.o
+      util::MakeTemp(StringPiece const&) in file.o
+      std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >::overflow(int) in file.o
+      ...
+  "std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::basic_string(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)", referenced from:
+      std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::vector(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > const&) in model.o
+      std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::vector(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > const&) in value_build.o
+      util::NameFromFD(int)   in file.o
+      util::SizeOrThrow(int)   in file.o
+      util::ResizeOrThrow(int, unsigned long long) in file.o
+      util::PartialRead(int, void*, unsigned long) in file.o
+      util::WriteOrThrow(int, void const*, unsigned long) in file.o
+      ...
+  "std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_string()", referenced from:
+      std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char) in bhiksha.o
+      std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char) in binary_format.o
+      lm::ngram::detail::GenericModel<lm::ngram::detail::HashedSearch<lm::ngram::BackoffValue>, lm::ngram::ProbingVocabulary>::GenericModel(char const*, lm::ngram::Config const&) in model.o
+      lm::ngram::detail::GenericModel<lm::ngram::detail::HashedSearch<lm::ngram::RestValue>, lm::ngram::ProbingVocabulary>::GenericModel(char const*, lm::ngram::Config const&) in model.o
+      lm::ngram::detail::GenericModel<lm::ngram::trie::TrieSearch<lm::ngram::DontQuantize, lm::ngram::trie::DontBhiksha>, lm::ngram::SortedVocabulary>::GenericModel(char const*, lm::ngram::Config const&) in model.o
+      lm::ngram::detail::GenericModel<lm::ngram::trie::TrieSearch<lm::ngram::DontQuantize, lm::ngram::trie::ArrayBhiksha>, lm::ngram::SortedVocabulary>::GenericModel(char const*, lm::ngram::Config const&) in model.o
+      lm::ngram::detail::GenericModel<lm::ngram::trie::TrieSearch<lm::ngram::SeparatelyQuantize, lm::ngram::trie::DontBhiksha>, lm::ngram::SortedVocabulary>::GenericModel(char const*, lm::ngram::Config const&) in model.o
+      ...
+  "std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::operator=(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)", referenced from:
+      std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >::str(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) in read_arpa.o
+      util::Exception::what() const in exception.o
+      util::Exception::SetLocation(char const*, unsigned int, char const*, char const*, char const*) in exception.o
+      std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >::str(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) in exception.o
+      std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >::str(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) in file.o
+      std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >::str(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) in usage.o
+  "std::__1::basic_istream<char, std::__1::char_traits<char> >::read(char*, long)", referenced from:
+      util::(anonymous namespace)::IStreamReader::Read(void*, unsigned long, util::ReadCompressed&) in read_compressed.o
+  "std::__1::basic_istream<char, std::__1::char_traits<char> >::sentry::sentry(std::__1::basic_istream<char, std::__1::char_traits<char> >&, bool)", referenced from:
+      std::__1::basic_istream<char, std::__1::char_traits<char> >& std::__1::operator>><char, std::__1::char_traits<char>, std::__1::allocator<char> >(std::__1::basic_istream<char, std::__1::char_traits<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&) in usage.o
+      std::__1::basic_istream<char, std::__1::char_traits<char> >& std::__1::getline<char, std::__1::char_traits<char>, std::__1::allocator<char> >(std::__1::basic_istream<char, std::__1::char_traits<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, char) in usage.o
+  "std::__1::basic_istream<char, std::__1::char_traits<char> >::~basic_istream()", referenced from:
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_ifstream<char, std::__1::char_traits<char> > in usage.o
+  "std::__1::basic_istream<char, std::__1::char_traits<char> >::~basic_istream()", referenced from:
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_ifstream<char, std::__1::char_traits<char> > in usage.o
+  "std::__1::basic_istream<char, std::__1::char_traits<char> >::~basic_istream()", referenced from:
+      util::PrintUsage(std::__1::basic_ostream<char, std::__1::char_traits<char> >&) in usage.o
+      std::__1::basic_ifstream<char, std::__1::char_traits<char> >::~basic_ifstream() in usage.o
+      virtual thunk to std::__1::basic_ifstream<char, std::__1::char_traits<char> >::~basic_ifstream() in usage.o
+      virtual thunk to std::__1::basic_ifstream<char, std::__1::char_traits<char> >::~basic_ifstream() in usage.o
+  "std::__1::basic_istream<char, std::__1::char_traits<char> >::operator>>(double&)", referenced from:
+      util::ParseSize(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) in usage.o
+  "std::__1::basic_istream<char, std::__1::char_traits<char> >::operator>>(unsigned long long&)", referenced from:
+      lm::ReadARPACounts(util::FilePiece&, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> >&) in read_arpa.o
+      util::ParseSize(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) in usage.o
+  "std::__1::basic_ostream<char, std::__1::char_traits<char> >::put(char)", referenced from:
+      lm::ngram::detail::(anonymous namespace)::ComplainAboutARPA(lm::ngram::Config const&, lm::ngram::ModelType) in model.o
+      lm::PositiveProbWarn::Warn(float) in read_arpa.o
+      lm::ngram::MissingUnknown(lm::ngram::Config const&) in vocab.o
+      util::ErsatzProgress::Milestone()     in ersatz_progress.o
+      util::scoped_fd::~scoped_fd() in file.o
+      util::scoped_FILE::~scoped_FILE() in file.o
+      util::FilePiece::Initialize(char const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >*, unsigned long) in file_piece.o
+      ...
+  "std::__1::basic_ostream<char, std::__1::char_traits<char> >::flush()", referenced from:
+      lm::ngram::detail::(anonymous namespace)::ComplainAboutARPA(lm::ngram::Config const&, lm::ngram::ModelType) in model.o
+      lm::PositiveProbWarn::Warn(float) in read_arpa.o
+      lm::ngram::MissingUnknown(lm::ngram::Config const&) in vocab.o
+      util::ErsatzProgress::Milestone()     in ersatz_progress.o
+      util::scoped_fd::~scoped_fd() in file.o
+      util::scoped_FILE::~scoped_FILE() in file.o
+      util::FilePiece::Initialize(char const*, std::__1::basic_ostream<char, std::__1::char_traits<char> >*, unsigned long) in file_piece.o
+      ...
+  "std::__1::basic_ostream<char, std::__1::char_traits<char> >::write(char const*, long)", referenced from:
+      lm::ReadARPACounts(util::FilePiece&, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> >&) in read_arpa.o
+      lm::ReadNGramHeader(util::FilePiece&, unsigned int) in read_arpa.o
+      lm::ReadEnd(util::FilePiece&)      in read_arpa.o
+      util::MakeTemp(StringPiece const&) in file.o
+      util::ParseNumberException::ParseNumberException(StringPiece) in file_piece.o
+      util::ParseNumberException::ParseNumberException(StringPiece) in file_piece.o
+      float util::FilePiece::ReadNumber<float>() in file_piece.o
+      ...
+  "std::__1::basic_ostream<char, std::__1::char_traits<char> >::sentry::sentry(std::__1::basic_ostream<char, std::__1::char_traits<char> >&)", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in bhiksha.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in binary_format.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in model.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in quantize.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in read_arpa.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char) in read_arpa.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <char, std::__1::char_traits<char>, std::__1::allocator<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) in read_arpa.o
+      ...
+  "std::__1::basic_ostream<char, std::__1::char_traits<char> >::sentry::~sentry()", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in bhiksha.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in binary_format.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in model.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in quantize.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in read_arpa.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char) in read_arpa.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <char, std::__1::char_traits<char>, std::__1::allocator<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) in read_arpa.o
+      ...
+  "std::__1::basic_ostream<char, std::__1::char_traits<char> >::~basic_ostream()", referenced from:
+      construction vtable for std::__1::basic_ostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      construction vtable for std::__1::basic_ostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      construction vtable for std::__1::basic_ostream<char, std::__1::char_traits<char> >-in-std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in file.o
+      construction vtable for std::__1::basic_ostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+  "std::__1::basic_ostream<char, std::__1::char_traits<char> >::~basic_ostream()", referenced from:
+      construction vtable for std::__1::basic_ostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      construction vtable for std::__1::basic_ostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      construction vtable for std::__1::basic_ostream<char, std::__1::char_traits<char> >-in-std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in file.o
+      construction vtable for std::__1::basic_ostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+  "std::__1::basic_ostream<char, std::__1::char_traits<char> >::~basic_ostream()", referenced from:
+      util::NameFromFD(int)   in file.o
+      std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_ostringstream() in file.o
+  "std::__1::basic_ostream<char, std::__1::char_traits<char> >::operator<<(double)", referenced from:
+      util::PrintUsage(std::__1::basic_ostream<char, std::__1::char_traits<char> >&) in usage.o
+  "std::__1::basic_ostream<char, std::__1::char_traits<char> >::operator<<(float)", referenced from:
+      lm::ngram::ReadHeader(int, lm::ngram::Parameters&) in binary_format.o
+      lm::ReadBackoff(util::FilePiece&, lm::Prob&)      in read_arpa.o
+      lm::ReadBackoff(util::FilePiece&, float&) in read_arpa.o
+      lm::PositiveProbWarn::Warn(float) in read_arpa.o
+      lm::ngram::ShowSizes(std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> > const&, lm::ngram::Config const&) in sizes.o
+      lm::ngram::MissingUnknown(lm::ngram::Config const&) in vocab.o
+  "std::__1::basic_ostream<char, std::__1::char_traits<char> >::operator<<(int)", referenced from:
+      lm::ngram::detail::(anonymous namespace)::CheckCounts(std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> > const&) in model.o
+      lm::ngram::LoadVirtual(char const*, lm::ngram::Config const&, lm::ngram::ModelType) in model.o
+      util::scoped_fd::~scoped_fd() in file.o
+      util::NameFromFD(int)   in file.o
+      util::(anonymous namespace)::InternalSeek(int, long long, int) in file.o
+      util::(anonymous namespace)::StreamCompressed<util::(anonymous namespace)::GZip>::Read(void*, unsigned long, util::ReadCompressed&) in read_compressed.o
+  "std::__1::basic_ostream<char, std::__1::char_traits<char> >::operator<<(unsigned int)", referenced from:
+      lm::ngram::trie::ArrayBhiksha::UpdateConfigFromBinary(lm::ngram::BinaryFormat const&, unsigned long long, lm::ngram::Config&) in bhiksha.o
+      lm::ngram::MatchCheck(lm::ngram::ModelType, unsigned int, lm::ngram::Parameters const&) in binary_format.o
+      lm::ngram::SeparatelyQuantize::UpdateConfigFromBinary(lm::ngram::BinaryFormat const&, unsigned long long, lm::ngram::Config&) in quantize.o
+      lm::ngram::SeparatelyQuantize::SetupMemory(void*, unsigned char, lm::ngram::Config const&) in quantize.o
+      lm::ReadNGramHeader(util::FilePiece&, unsigned int) in read_arpa.o
+      lm::ngram::(anonymous namespace)::ActivateLowerMiddle<util::ProbingHashTable<lm::ngram::RestValue::ProbingEntry, util::IdentityHash, std::__1::equal_to<unsigned long long> > >::operator()(unsigned int const*, unsigned int) in search_hashed.o
+      lm::ngram::(anonymous namespace)::ActivateLowerMiddle<util::ProbingHashTable<lm::ngram::BackoffValue::ProbingEntry, util::IdentityHash, std::__1::equal_to<unsigned long long> > >::operator()(unsigned int const*, unsigned int) in search_hashed.o
+      ...
+  "std::__1::basic_ostream<char, std::__1::char_traits<char> >::operator<<(long)", referenced from:
+      lm::ngram::IsBinaryFormat(int)  in binary_format.o
+      lm::ngram::detail::GenericModel<lm::ngram::detail::HashedSearch<lm::ngram::BackoffValue>, lm::ngram::ProbingVocabulary>::SetupMemory(void*, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> > const&, lm::ngram::Config const&) in model.o
+      lm::ngram::detail::GenericModel<lm::ngram::detail::HashedSearch<lm::ngram::RestValue>, lm::ngram::ProbingVocabulary>::SetupMemory(void*, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> > const&, lm::ngram::Config const&) in model.o
+      lm::ngram::detail::GenericModel<lm::ngram::trie::TrieSearch<lm::ngram::DontQuantize, lm::ngram::trie::DontBhiksha>, lm::ngram::SortedVocabulary>::SetupMemory(void*, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> > const&, lm::ngram::Config const&) in model.o
+      lm::ngram::detail::GenericModel<lm::ngram::trie::TrieSearch<lm::ngram::DontQuantize, lm::ngram::trie::ArrayBhiksha>, lm::ngram::SortedVocabulary>::SetupMemory(void*, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> > const&, lm::ngram::Config const&) in model.o
+      lm::ngram::detail::GenericModel<lm::ngram::trie::TrieSearch<lm::ngram::SeparatelyQuantize, lm::ngram::trie::DontBhiksha>, lm::ngram::SortedVocabulary>::SetupMemory(void*, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> > const&, lm::ngram::Config const&) in model.o
+      lm::ngram::detail::GenericModel<lm::ngram::trie::TrieSearch<lm::ngram::SeparatelyQuantize, lm::ngram::trie::ArrayBhiksha>, lm::ngram::SortedVocabulary>::SetupMemory(void*, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> > const&, lm::ngram::Config const&) in model.o
+      ...
+  "std::__1::basic_ostream<char, std::__1::char_traits<char> >::operator<<(unsigned long)", referenced from:
+      lm::ngram::detail::(anonymous namespace)::CheckCounts(std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> > const&) in model.o
+      lm::ngram::detail::GenericModel<lm::ngram::detail::HashedSearch<lm::ngram::BackoffValue>, lm::ngram::ProbingVocabulary>::SetupMemory(void*, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> > const&, lm::ngram::Config const&) in model.o
+      lm::ngram::detail::GenericModel<lm::ngram::detail::HashedSearch<lm::ngram::RestValue>, lm::ngram::ProbingVocabulary>::SetupMemory(void*, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> > const&, lm::ngram::Config const&) in model.o
+      lm::ngram::detail::GenericModel<lm::ngram::trie::TrieSearch<lm::ngram::DontQuantize, lm::ngram::trie::DontBhiksha>, lm::ngram::SortedVocabulary>::SetupMemory(void*, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> > const&, lm::ngram::Config const&) in model.o
+      lm::ngram::detail::GenericModel<lm::ngram::trie::TrieSearch<lm::ngram::DontQuantize, lm::ngram::trie::ArrayBhiksha>, lm::ngram::SortedVocabulary>::SetupMemory(void*, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> > const&, lm::ngram::Config const&) in model.o
+      lm::ngram::detail::GenericModel<lm::ngram::trie::TrieSearch<lm::ngram::SeparatelyQuantize, lm::ngram::trie::DontBhiksha>, lm::ngram::SortedVocabulary>::SetupMemory(void*, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> > const&, lm::ngram::Config const&) in model.o
+      lm::ngram::detail::GenericModel<lm::ngram::trie::TrieSearch<lm::ngram::SeparatelyQuantize, lm::ngram::trie::ArrayBhiksha>, lm::ngram::SortedVocabulary>::SetupMemory(void*, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> > const&, lm::ngram::Config const&) in model.o
+      ...
+  "std::__1::basic_ostream<char, std::__1::char_traits<char> >::operator<<(long long)", referenced from:
+      util::(anonymous namespace)::InternalSeek(int, long long, int) in file.o
+  "std::__1::basic_ostream<char, std::__1::char_traits<char> >::operator<<(unsigned long long)", referenced from:
+      lm::ngram::BinaryFormat::LoadBinary(unsigned long) in binary_format.o
+      lm::ngram::detail::GenericModel<lm::ngram::detail::HashedSearch<lm::ngram::BackoffValue>, lm::ngram::ProbingVocabulary>::InitializeFromARPA(int, char const*, lm::ngram::Config const&) in model.o
+      lm::ngram::detail::GenericModel<lm::ngram::detail::HashedSearch<lm::ngram::RestValue>, lm::ngram::ProbingVocabulary>::InitializeFromARPA(int, char const*, lm::ngram::Config const&) in model.o
+      lm::ngram::detail::GenericModel<lm::ngram::trie::TrieSearch<lm::ngram::DontQuantize, lm::ngram::trie::DontBhiksha>, lm::ngram::SortedVocabulary>::InitializeFromARPA(int, char const*, lm::ngram::Config const&) in model.o
+      lm::ngram::detail::GenericModel<lm::ngram::trie::TrieSearch<lm::ngram::DontQuantize, lm::ngram::trie::ArrayBhiksha>, lm::ngram::SortedVocabulary>::InitializeFromARPA(int, char const*, lm::ngram::Config const&) in model.o
+      lm::ngram::detail::GenericModel<lm::ngram::trie::TrieSearch<lm::ngram::SeparatelyQuantize, lm::ngram::trie::DontBhiksha>, lm::ngram::SortedVocabulary>::InitializeFromARPA(int, char const*, lm::ngram::Config const&) in model.o
+      lm::ngram::detail::GenericModel<lm::ngram::trie::TrieSearch<lm::ngram::SeparatelyQuantize, lm::ngram::trie::ArrayBhiksha>, lm::ngram::SortedVocabulary>::InitializeFromARPA(int, char const*, lm::ngram::Config const&) in model.o
+      ...
+  "std::__1::basic_iostream<char, std::__1::char_traits<char> >::~basic_iostream()", referenced from:
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+  "std::__1::basic_iostream<char, std::__1::char_traits<char> >::~basic_iostream()", referenced from:
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+  "std::__1::basic_iostream<char, std::__1::char_traits<char> >::~basic_iostream()", referenced from:
+      lm::ReadARPACounts(util::FilePiece&, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> >&) in read_arpa.o
+      lm::ReadNGramHeader(util::FilePiece&, unsigned int) in read_arpa.o
+      std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_stringstream() in read_arpa.o
+      util::Exception::Exception() in exception.o
+      util::Exception::Exception(util::Exception const&) in exception.o
+      std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_stringstream() in exception.o
+      util::ParseSize(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) in usage.o
+      ...
+  "std::__1::basic_streambuf<char, std::__1::char_traits<char> >::sync()", referenced from:
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in file.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+  "std::__1::basic_streambuf<char, std::__1::char_traits<char> >::imbue(std::__1::locale const&)", referenced from:
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in file.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+  "std::__1::basic_streambuf<char, std::__1::char_traits<char> >::uflow()", referenced from:
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in file.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+      vtable for std::__1::basic_filebuf<char, std::__1::char_traits<char> > in usage.o
+  "std::__1::basic_streambuf<char, std::__1::char_traits<char> >::setbuf(char*, long)", referenced from:
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in file.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+  "std::__1::basic_streambuf<char, std::__1::char_traits<char> >::xsgetn(char*, long)", referenced from:
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in file.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+      vtable for std::__1::basic_filebuf<char, std::__1::char_traits<char> > in usage.o
+  "std::__1::basic_streambuf<char, std::__1::char_traits<char> >::xsputn(char const*, long)", referenced from:
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in file.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+      vtable for std::__1::basic_filebuf<char, std::__1::char_traits<char> > in usage.o
+  "std::__1::basic_streambuf<char, std::__1::char_traits<char> >::showmanyc()", referenced from:
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in file.o
+      vtable for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+      vtable for std::__1::basic_filebuf<char, std::__1::char_traits<char> > in usage.o
+  "std::__1::basic_streambuf<char, std::__1::char_traits<char> >::basic_streambuf()", referenced from:
+      lm::ReadARPACounts(util::FilePiece&, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> >&) in read_arpa.o
+      lm::ReadNGramHeader(util::FilePiece&, unsigned int) in read_arpa.o
+      util::Exception::Exception() in exception.o
+      util::Exception::Exception(util::Exception const&) in exception.o
+      util::NameFromFD(int)   in file.o
+      util::ParseSize(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) in usage.o
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::basic_filebuf() in usage.o
+      ...
+  "std::__1::basic_streambuf<char, std::__1::char_traits<char> >::~basic_streambuf()", referenced from:
+      lm::ReadARPACounts(util::FilePiece&, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> >&) in read_arpa.o
+      lm::ReadNGramHeader(util::FilePiece&, unsigned int) in read_arpa.o
+      std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_stringstream() in read_arpa.o
+      std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_stringbuf() in read_arpa.o
+      std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_stringbuf() in read_arpa.o
+      util::Exception::Exception() in exception.o
+      util::Exception::Exception(util::Exception const&) in exception.o
+      ...
+  "std::__1::cerr", referenced from:
+      lm::ngram::Config::Config() in config.o
+      lm::ngram::Config::Config() in config.o
+      lm::PositiveProbWarn::Warn(float) in read_arpa.o
+      lm::ngram::ShowSizes(std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> > const&, lm::ngram::Config const&) in sizes.o
+      util::scoped_fd::~scoped_fd() in file.o
+      util::scoped_FILE::~scoped_FILE() in file.o
+      util::scoped_mmap::~scoped_mmap() in mmap.o
+      ...
+  "std::__1::ctype<char>::id", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in bhiksha.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in binary_format.o
+      lm::ngram::detail::(anonymous namespace)::ComplainAboutARPA(lm::ngram::Config const&, lm::ngram::ModelType) in model.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in model.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in quantize.o
+      lm::PositiveProbWarn::Warn(float) in read_arpa.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in read_arpa.o
+      ...
+  "void std::__1::__sort<std::__1::__less<float, float>&, float*>(float*, float*, std::__1::__less<float, float>&)", referenced from:
+      lm::ngram::SeparatelyQuantize::Train(unsigned char, std::__1::vector<float, std::__1::allocator<float> >&, std::__1::vector<float, std::__1::allocator<float> >&) in quantize.o
+      lm::ngram::SeparatelyQuantize::TrainProb(unsigned char, std::__1::vector<float, std::__1::allocator<float> >&) in quantize.o
+  "std::__1::locale::locale(std::__1::locale const&)", referenced from:
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::basic_filebuf() in usage.o
+  "std::__1::locale::~locale()", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in bhiksha.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in binary_format.o
+      lm::ngram::detail::(anonymous namespace)::ComplainAboutARPA(lm::ngram::Config const&, lm::ngram::ModelType) in model.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in model.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in quantize.o
+      lm::PositiveProbWarn::Warn(float) in read_arpa.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in read_arpa.o
+      ...
+  "std::__1::codecvt<char, char, __mbstate_t>::id", referenced from:
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::imbue(std::__1::locale const&) in usage.o
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::basic_filebuf() in usage.o
+  "std::__1::ios_base::__set_badbit_and_consider_rethrow()", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in bhiksha.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in binary_format.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in model.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in quantize.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in read_arpa.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char) in read_arpa.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <char, std::__1::char_traits<char>, std::__1::allocator<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) in read_arpa.o
+      ...
+  "std::__1::ios_base::init(void*)", referenced from:
+      lm::ReadARPACounts(util::FilePiece&, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> >&) in read_arpa.o
+      lm::ReadNGramHeader(util::FilePiece&, unsigned int) in read_arpa.o
+      util::Exception::Exception() in exception.o
+      util::Exception::Exception(util::Exception const&) in exception.o
+      util::NameFromFD(int)   in file.o
+      util::PrintUsage(std::__1::basic_ostream<char, std::__1::char_traits<char> >&) in usage.o
+      util::ParseSize(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) in usage.o
+      ...
+  "std::__1::ios_base::clear(unsigned int)", referenced from:
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in bhiksha.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in binary_format.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in model.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in quantize.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*) in read_arpa.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char) in read_arpa.o
+      std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::operator<< <char, std::__1::char_traits<char>, std::__1::allocator<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) in read_arpa.o
+      ...
+  "std::__1::basic_ios<char, std::__1::char_traits<char> >::~basic_ios()", referenced from:
+      lm::ReadARPACounts(util::FilePiece&, std::__1::vector<unsigned long long, std::__1::allocator<unsigned long long> >&) in read_arpa.o
+      lm::ReadNGramHeader(util::FilePiece&, unsigned int) in read_arpa.o
+      std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_stringstream() in read_arpa.o
+      std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_stringstream() in read_arpa.o
+      non-virtual thunk to std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_stringstream() in read_arpa.o
+      non-virtual thunk to std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_stringstream() in read_arpa.o
+      virtual thunk to std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_stringstream() in read_arpa.o
+      ...
+  "std::bad_cast::bad_cast()", referenced from:
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::seekoff(long long, std::__1::ios_base::seekdir, unsigned int) in usage.o
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::sync() in usage.o
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::underflow() in usage.o
+      std::__1::basic_filebuf<char, std::__1::char_traits<char> >::overflow(int) in usage.o
+  "std::bad_alloc::bad_alloc()", referenced from:
+      util::(anonymous namespace)::ReadFactory(int, unsigned long long&, void const*, unsigned long, bool) in read_compressed.o
+  "typeinfo for std::__1::basic_istream<char, std::__1::char_traits<char> >", referenced from:
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_ifstream<char, std::__1::char_traits<char> > in usage.o
+      typeinfo for std::__1::basic_ifstream<char, std::__1::char_traits<char> > in usage.o
+  "typeinfo for std::__1::basic_ostream<char, std::__1::char_traits<char> >", referenced from:
+      construction vtable for std::__1::basic_ostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      construction vtable for std::__1::basic_ostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      construction vtable for std::__1::basic_ostream<char, std::__1::char_traits<char> >-in-std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in file.o
+      typeinfo for std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in file.o
+      construction vtable for std::__1::basic_ostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+  "typeinfo for std::__1::basic_iostream<char, std::__1::char_traits<char> >", referenced from:
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      typeinfo for std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      typeinfo for std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+      typeinfo for std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+  "typeinfo for std::__1::basic_streambuf<char, std::__1::char_traits<char> >", referenced from:
+      typeinfo for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      typeinfo for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      typeinfo for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in file.o
+      typeinfo for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+      typeinfo for std::__1::basic_filebuf<char, std::__1::char_traits<char> > in usage.o
+  "non-virtual thunk to std::__1::basic_iostream<char, std::__1::char_traits<char> >::~basic_iostream()", referenced from:
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+  "non-virtual thunk to std::__1::basic_iostream<char, std::__1::char_traits<char> >::~basic_iostream()", referenced from:
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+  "virtual thunk to std::__1::basic_istream<char, std::__1::char_traits<char> >::~basic_istream()", referenced from:
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_ifstream<char, std::__1::char_traits<char> > in usage.o
+  "virtual thunk to std::__1::basic_istream<char, std::__1::char_traits<char> >::~basic_istream()", referenced from:
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+      construction vtable for std::__1::basic_istream<char, std::__1::char_traits<char> >-in-std::__1::basic_ifstream<char, std::__1::char_traits<char> > in usage.o
+  "virtual thunk to std::__1::basic_ostream<char, std::__1::char_traits<char> >::~basic_ostream()", referenced from:
+      construction vtable for std::__1::basic_ostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      construction vtable for std::__1::basic_ostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      construction vtable for std::__1::basic_ostream<char, std::__1::char_traits<char> >-in-std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in file.o
+      construction vtable for std::__1::basic_ostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+  "virtual thunk to std::__1::basic_ostream<char, std::__1::char_traits<char> >::~basic_ostream()", referenced from:
+      construction vtable for std::__1::basic_ostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      construction vtable for std::__1::basic_ostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      construction vtable for std::__1::basic_ostream<char, std::__1::char_traits<char> >-in-std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in file.o
+      construction vtable for std::__1::basic_ostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+  "virtual thunk to std::__1::basic_iostream<char, std::__1::char_traits<char> >::~basic_iostream()", referenced from:
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+  "virtual thunk to std::__1::basic_iostream<char, std::__1::char_traits<char> >::~basic_iostream()", referenced from:
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in read_arpa.o
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in exception.o
+      construction vtable for std::__1::basic_iostream<char, std::__1::char_traits<char> >-in-std::__1::basic_stringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> > in usage.o
+ld: symbol(s) not found for architecture x86_64
+collect2: error: ld returned 1 exit status
+make: *** [ngram_query] Error 1
