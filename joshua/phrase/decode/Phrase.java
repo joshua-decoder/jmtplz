@@ -6,17 +6,17 @@ import joshua.Vocabulary;
 public class Phrase {
 	
 	// word ids not strings
-	private int[] words;
+	private long[] words;
 
 	public Phrase(Vocabulary vocabulary, String[] words) {
 		// converts words to word ids
-		this.words = new int[words.length];
+		this.words = new long[words.length];
 		for (int i = 0; i < words.length; i++) {
 			this.words[i] = vocabulary.findOrInsert(words[i]);
 		}
 	}
 	
-	public int[] getWords() {
+	public long[] getWords() {
 		return words;
 	}
 	

@@ -8,17 +8,17 @@ import joshua.Vocabulary;
 // currently an unoptimized implementation of MutableVocab
 public class SlowHashMapVocabulary implements Vocabulary {
 	
-	private Map<String, Integer> map = new HashMap<String, Integer>();
+	private Map<String, Long> map = new HashMap<String, Long>();
 
 	@Override
-	public int find(String word) {
+	public long find(String word) {
 		return map.get(word);
 	}
 
 	@Override
-	public int findOrInsert(String word) {
+	public long findOrInsert(String word) {
 		if (!map.containsKey(word)) {
-			map.put(word, map.size());
+			map.put(word, (long)map.size());
 		}
 		return map.get(word);
 	}

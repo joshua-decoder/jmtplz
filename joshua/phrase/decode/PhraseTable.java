@@ -26,13 +26,13 @@ public class PhraseTable {
 	  Entry entry = null;
 	  ArrayList<Long> source = new ArrayList<Long>();
 	  while ((line = br.readLine()) != null) {
-	     String[] pipes = line.split("|||");
-	     long source_text_hash = 1; // murmur hash pipes
+	     String[] pipes = line.split("\\s*\\|\\|\\|\\s*"); // split ||| and trim
+	     long source_text_hash = pipes[0].hashCode(); // todo: murmur hash
 	     if (source_text_hash != previous_text_hash) {
 	    	 if (entry != null) entry.getVertex().getRoot().finishRoot(kPolicy.Left);
 	    	 source.clear();
 	    	 for (String word : pipes[0].split(" ")) {
-	    		 vocab.findOrInsert(word);
+	    		 source.add(vocab.findOrInsert(word));
 	    	 }
 	    	 maxSourcePhraseLength = Math.max(maxSourcePhraseLength, source.size());
 	    	 long hash = hashWords(source);

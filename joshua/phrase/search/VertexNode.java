@@ -1,5 +1,6 @@
 package joshua.phrase.search;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -17,6 +18,12 @@ public class VertexNode {
 	private byte niceness;
 	private kPolicy policy;
 	private float bound; // c++: type is score which is typedef floats
+	
+	public VertexNode() {
+		hypos = new ArrayList<HypoState>();
+		extend = new ArrayList<VertexNode>();
+		state = new ChartState();
+	}
 
 	public void initRoot() {
 		hypos.clear();
@@ -45,7 +52,7 @@ public class VertexNode {
 		this.policy = policy;
 	  
 		if (hypos.size() == 1) {
-	      // extend.resize(1);
+			extend.add(new VertexNode()); // extend.resize(1);
 			extend.get(0).appendHypothesis(hypos.get(0));
 			extend.get(0).finishedAppending((byte)0, (byte)0, policy);
 		}

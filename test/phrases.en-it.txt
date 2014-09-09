@@ -1,0 +1,6 @@
+hello ||| ciao ||| 123
+hello world ||| buon giorno mondo ||| 123
+hello world ||| ciao mondo ||| 123
+hello world ||| ciao mondo ! ||| 123
+cat ||| cane ||| 324234
+dog ||| dog ||| 234324

@@ -11,7 +11,7 @@ public class Scorer {
 	  return 0; // todo
   }
   
-  public float LM(int[] words, ChartState state) {
+  public float LM(long[] words, ChartState state) {
 	  return 0; // todo
   }
   

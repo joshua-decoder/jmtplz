@@ -2,7 +2,7 @@ package joshua;
 
 public interface Vocabulary {
 
-  int find(String word);
-  int findOrInsert(String word);
+  long find(String word);
+  long findOrInsert(String word);
 
 }
