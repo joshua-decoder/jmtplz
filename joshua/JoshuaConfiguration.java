@@ -10,6 +10,8 @@ package joshua;
  * @author Matt Post <post@cs.jhu.edu>
  */
 public class JoshuaConfiguration {
+	
+  public static final int KENLM_MAX_ORDER = 3;
 
   public JoshuaConfiguration() {
   }
