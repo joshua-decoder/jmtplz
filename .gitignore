@@ -15,3 +15,7 @@ hs_err_pid*
 *.o
 # kenlm library
 libken.so
+
+# vagrant for virtual machines
+Vagrantfile
+.vagrant
