@@ -1,8 +1,8 @@
 package joshua;
 
-public class Vocabulary {
+public interface Vocabulary {
 
-  public Vocabulary() {
-  }
+  int find(String word);
+  int findOrInsert(String word);
 
 }
