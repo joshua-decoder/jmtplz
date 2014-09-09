@@ -12,4 +12,14 @@ public class Coverage {
     return false;
   }
 
+  public int LeftOpen(int begin) {
+    // TODO Auto-generated method stub
+    return 0;
+  }
+
+  public int RightOpen(int end, int i) {
+    // TODO Auto-generated method stub
+    return 0;
+  }
+
 }
