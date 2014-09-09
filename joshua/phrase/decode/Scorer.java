@@ -6,17 +6,17 @@ public class Scorer {
 
   public Scorer() {
   }
-  
+
   public float parse(String[] features) {
-	  return 0; // todo
+    return 0; // todo
   }
-  
+
   public float LM(long[] words, ChartState state) {
-	  return 0; // todo
+    return 0; // todo
   }
-  
+
   public float targetWordCount(int num_words) {
-	  return 0; // todo
+    return 0; // todo
   }
 
 }

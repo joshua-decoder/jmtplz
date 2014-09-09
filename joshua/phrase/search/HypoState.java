@@ -6,9 +6,9 @@ public class HypoState {
   public Note history;
   public ChartState state;
   public float score; // typedef float Score
-  
+
   public HypoState() {
-	  history = new Note();
-	  state = new ChartState();
+    history = new Note();
+    state = new ChartState();
   }
 }
