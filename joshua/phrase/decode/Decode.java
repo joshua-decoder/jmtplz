@@ -5,7 +5,6 @@ import java.io.OutputStream;
 import java.util.HashMap;
 
 import joshua.Vocabulary;
-import joshua.phrase.util.SlowHashMapVocabulary;
 
 public class Decode {
 
@@ -15,9 +14,9 @@ public class Decode {
   }
 
   public static void main(String[] args) throws IOException {
-    Vocabulary vocab = new SlowHashMapVocabulary();
-    Scorer scorer = new Scorer();
-    PhraseTable ptable = new PhraseTable("phrases.en-it.txt", vocab, scorer);
+    Vocabulary vocab;
+    Scorer scorer = new Scorer(null, null);
+    PhraseTable ptable = new PhraseTable("phrases.en-it.txt", scorer);
     System.out.println("longest source phrase: " + ptable.getMaxSourcePhraseLength());
   }
 }

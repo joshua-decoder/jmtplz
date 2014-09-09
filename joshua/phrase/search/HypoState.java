@@ -2,13 +2,8 @@ package joshua.phrase.search;
 
 import joshua.phrase.lm.ngram.ChartState;
 
-public class HypoState {
-  public Note history;
-  public ChartState state;
-  public float score; // typedef float Score
-
-  public HypoState() {
-    history = new Note();
-    state = new ChartState();
-  }
+public class HypoState<T> {
+  public T history = null;
+  public ChartState state = null; // lm::ngram::ChartState* pointer
+  public float score = 0.0f; // typedef float Score
 }

@@ -1,6 +1,12 @@
 package joshua.phrase.search;
 
-public class Note {
-	// *vp, *cvp, ints
-	public long[] cvp;
+public class Note<T> {
+  T value;
+  
+  public Note() {
+  }
+  
+  public Note(T value) {
+    this.value = value;
+  }
 }

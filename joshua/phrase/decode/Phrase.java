@@ -6,17 +6,21 @@ import joshua.Vocabulary;
 public class Phrase {
 
   // word ids not strings
-  private long[] words;
+  private int[] words; // ID* pointer
 
-  public Phrase(Vocabulary vocabulary, String[] words) {
+  public Phrase(int word) {
+    this.words = new int[] { word };
+  }
+  
+  public Phrase(String[] words) {
     // converts words to word ids
-    this.words = new long[words.length];
+    this.words = new int[words.length];
     for (int i = 0; i < words.length; i++) {
-      this.words[i] = vocabulary.findOrInsert(words[i]);
+      this.words[i] = Vocabulary.id(words[i]);
     }
   }
 
-  public long[] getWords() {
+  public int[] getWords() {
     return words;
   }
 
