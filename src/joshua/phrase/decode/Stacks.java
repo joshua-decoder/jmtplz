@@ -1,5 +1,6 @@
 package joshua.phrase.decode;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import joshua.phrase.search.EdgeGenerator;
@@ -18,10 +19,12 @@ public class Stacks {
 
   public Stacks(Context context, Chart chart) {
     Future future = new Future(chart);
+    stacks = new ArrayList<Stack>();
     // Reservation is critical because pointers to Hypothesis objects are retained as history.
     //stacks.reserve(chart.SentenceLength() + 2 /* begin/end of sentence */);
     stacks.clear();
-    stacks.add(new Stack());
+    for (int i = 0; i < chart.SentenceLength() + 2; i++)
+      stacks.add(new Stack());
     // Initialize root hypothesis with <s> context and future cost for everything.
     stacks.get(0).add(new Hypothesis(context.GetScorer().languageModel().beginSentenceState(), future.Full()));
     // Decode with increasing numbers of source words.

@@ -19,6 +19,9 @@ public class Chart {
       words.add(Vocabulary.id(word));
     }
     sentence_length = words.size();
+    
+    entries = new ArrayList<TargetPhrases>();
+    
     // There's some unreachable ranges off the edge.  Meh.
     //entries_.resize(sentence_length_ * max_source_phrase_length_);
 //    for (int begin = 0; begin != words.size(); ++begin) {

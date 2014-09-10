@@ -8,6 +8,7 @@ import java.util.List;
 
 import joshua.JoshuaConfiguration;
 import joshua.Vocabulary;
+import joshua.util.io.LineReader;
 
 public class Decode {
 
@@ -83,5 +84,11 @@ public class Decode {
     Context context = new Context("lm.kenlm", "weights.txt", new JoshuaConfiguration());
     PhraseTable ptable = new PhraseTable("phrases.en-it.txt", context.GetScorer());
     System.out.println("longest source phrase: " + ptable.getMaxSourcePhraseLength());
+    HashMap<String, ScoreHistory> map = new HashMap<String, ScoreHistory>();
+    boolean verbose = true;
+    
+    for (String source: new LineReader(System.in)) {
+      new Decode(context, ptable, source, map, verbose, new OutputStreamWriter(System.out));
+    }
   }
 }

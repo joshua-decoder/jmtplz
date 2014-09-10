@@ -1,5 +1,6 @@
 package joshua.phrase.decode;
 
+import java.util.ArrayList;
 import java.util.List;
 
 // complete
@@ -12,6 +13,9 @@ public class Future {
   private List<Float> entries;
   
   public Future(Chart chart) {
+    
+    entries = new ArrayList<Float>();
+    
     sentence_length_plus_1 = chart.SentenceLength() + 1;
     for (int i = 0; i < sentence_length_plus_1 * sentence_length_plus_1; i++) {
       entries.add(Float.NEGATIVE_INFINITY);
