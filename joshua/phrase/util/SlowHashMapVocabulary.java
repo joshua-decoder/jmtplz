@@ -22,5 +22,15 @@ public class SlowHashMapVocabulary implements Vocabulary {
     }
     return map.get(word);
   }
+  
+  @Override
+  public String String(long id) {
+    for (String key : map.keySet()) {
+      if (map.get(key) == id) {
+        return key;
+      }
+    }
+    return null;
+  }
 
 }

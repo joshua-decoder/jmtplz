@@ -1,6 +1,7 @@
 package joshua.phrase.decode;
 
 import joshua.JoshuaConfiguration;
+import joshua.Vocabulary;
 
 public class Context {
 
@@ -23,7 +24,7 @@ public class Context {
     return null;
   }
 
-  public Object GetVocab() {
+  public Vocabulary GetVocab() {
     // TODO Auto-generated method stub
     return null;
   }

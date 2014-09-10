@@ -38,4 +38,9 @@ public class Phrase {
     return null;
   }
 
+  public boolean Valid() {
+    // TODO Auto-generated method stub
+    return false;
+  }
+
 }
