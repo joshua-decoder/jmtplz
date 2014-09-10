@@ -16,6 +16,7 @@ public class EdgeOutput {
   }
   
   public void FinishedSearch() {
+    // this is empty
   }
 
 }

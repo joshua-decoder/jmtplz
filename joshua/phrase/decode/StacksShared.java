@@ -1,5 +1,6 @@
 package joshua.phrase.decode;
 
+import joshua.phrase.search.EdgeGenerator;
 import joshua.phrase.search.HypoState;
 import joshua.phrase.search.IntPair;
 import joshua.phrase.search.Note;
