@@ -2,7 +2,6 @@ package joshua.phrase.decode;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -16,7 +15,7 @@ public class PhraseTable {
   private int maxSourcePhraseLength;
   private Map<Long, TargetPhrases> map; // unoptimized
 
-  public PhraseTable(String file, Vocabulary vocab, Scorer scorer) throws IOException {
+  public PhraseTable(String file, Vocabulary vocab, Scorer scorer) throws Exception {
     maxSourcePhraseLength = 0;
     map = new HashMap<Long, TargetPhrases>();
 
@@ -50,11 +49,11 @@ public class PhraseTable {
       HypoState hypo = new HypoState();
       hypo.history.cvp = target.getWords(); // c++: target.Base()
 
-      float parsed_score = scorer.parse(pipes[2].split(" "));
+      float parsed_score = scorer.parse(pipes[2]);
       hypo.score = parsed_score + scorer.LM(target.getWords(), hypo.state) // c++:
                                                                            // target.begin(),
                                                                            // target.end()
-          + scorer.targetWordCount(target.size());
+          + scorer.TargetWordCount(target.size());
 
       entry.getVertex().getRoot().appendHypothesis(hypo);
     }

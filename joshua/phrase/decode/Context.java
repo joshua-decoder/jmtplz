@@ -11,7 +11,7 @@ public class Context {
   private JoshuaConfiguration config;
   private Object search_context; // search::Context<Sorer::Model>
 
-  public Context(String lm, String weights_file, JoshuaConfiguration config) {
+  public Context(String lm, String weights_file, JoshuaConfiguration config) throws Exception {
     this.vocab = new SlowHashMapVocabulary();
     this.scorer = new Scorer(lm, weights_file, this.vocab);
     this.config = new JoshuaConfiguration();

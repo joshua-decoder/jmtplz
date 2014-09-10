@@ -51,7 +51,7 @@ public class Weights {
     PopulateWeights();
   }
   
-  private static float kConverter(String s) {
+  public static float kConverter(String s) {
     if (s.equalsIgnoreCase("inf")) return Float.POSITIVE_INFINITY;
     if (s.equalsIgnoreCase("nan")) return Float.NaN;
     return Float.parseFloat(s);

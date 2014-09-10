@@ -79,7 +79,7 @@ public class Decode {
     }
   }
 
-  public static void main(String[] args) throws IOException {
+  public static void main(String[] args) throws Exception {
     Context context = new Context("lm.arpa", "weights.txt", new JoshuaConfiguration());
     PhraseTable ptable = new PhraseTable("phrases.en-it.txt", context.GetVocab(), context.GetScorer());
     System.out.println("longest source phrase: " + ptable.getMaxSourcePhraseLength());

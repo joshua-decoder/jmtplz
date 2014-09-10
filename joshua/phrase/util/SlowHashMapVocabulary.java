@@ -32,5 +32,10 @@ public class SlowHashMapVocabulary implements Vocabulary {
     }
     return null;
   }
+  
+  @Override
+  public int Size() {
+    return map.size();
+  }
 
 }
