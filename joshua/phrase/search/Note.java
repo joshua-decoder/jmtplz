@@ -1,6 +1,6 @@
 package joshua.phrase.search;
 
-import joshua.phrase.decode.Hypothesis;
+// PORT: done
 
 public class Note {
   public Object value;

@@ -3,6 +3,7 @@ package joshua.phrase.decode;
 import joshua.phrase.lm.ngram.ChartState;
 import joshua.phrase.search.IntPair;
 import joshua.phrase.search.Note;
+import joshua.phrase.search.PartialVertex;
 
 public class PartialEdge {
 
@@ -24,12 +25,12 @@ public class PartialEdge {
     
   }
 
-  public void SetScore(int i) {
+  public void SetScore(float i) {
     // TODO Auto-generated method stub
     
   }
 
-  public PartialEdge[] NT() {
+  public PartialVertex[] NT() {
     // TODO Auto-generated method stub
     return null;
   }

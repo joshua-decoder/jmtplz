@@ -5,7 +5,9 @@ package joshua.phrase.search;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Vector;
 
 import joshua.phrase.lm.ngram.ChartState;
 import joshua.phrase.lm.ngram.Left;
@@ -31,6 +33,15 @@ public class VertexNode {
     hypos.clear();
   }
 
+  public void AppendHypothesis(NBestComplete best) {
+    assert hypos.isEmpty() || ! (hypos.get(0).state.equals(best.state));
+    HypoState hypo = new HypoState();
+    hypo.history = best.history;
+    hypo.state = best.state;
+    hypo.score = best.score;
+    hypos.add(hypo);
+  }
+  
   public void appendHypothesis(HypoState hypo) {
     hypos.add(hypo);
   }
@@ -97,6 +108,27 @@ public class VertexNode {
       this.niceness = (policy == kPolicy.Left) ? state.left.length : state.right.length;
     }
   }
+  
+  public void BuildExtend() {
+    if (! extend.isEmpty()) return;
+    if (hypos.size() <= 1) return;
+    if (policy == kPolicy.Left) {
+      Split(new DivideLeft(state.left.length), hypos, extend);
+    } else if (policy == kPolicy.Right){
+      Split(new DivideRight(state.right.length), hypos, extend);
+    } else {
+      assert policy == kPolicy.All;
+      extend.clear();
+      for (int i = 0; i < hypos.size(); i++) {
+        VertexNode newNode = new VertexNode();
+        newNode.appendHypothesis(hypos.get(i));
+        extend.add(newNode);
+      }
+    }
+    for (VertexNode node: extend) {
+      node.finishedAppending(state.left.length, state.right.length, policy);
+    }
+  }
 
   public boolean complete() {
     return hypos.size() == 1 && extend.isEmpty();
@@ -114,4 +146,83 @@ public class VertexNode {
     return bound;
   }
 
+  public boolean Empty() {
+    return hypos.isEmpty() && extend.isEmpty();
+  }
+
+  public ChartState State() {
+    return state;
+  }
+
+  public boolean RightFull() {
+    return rightFull;
+  }
+  
+  public VertexNode get(int index) {
+    return extend.get(index);
+  }
+
+  public byte Niceness() {
+    return niceness;
+  }
+
+
+  public Note End() {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  private static long kCompleteAdd = -1;
+  
+  private interface Divider {
+    public long divide(ChartState state);
+  }
+  
+  private class DivideLeft implements Divider {                                                                                   
+    private byte index;
+    
+    public DivideLeft(byte index) {
+      this.index = index;
+    }
+
+    public long divide(ChartState state) {
+      // TODO: figure out bit manipulations
+      return 0;
+      
+//      return (index < state.left.length) ?       
+//          (state.left.pointers[index]) :     
+//            (kCompleteAdd - state.left.full); 
+    }
+  }                                                                                                   
+                                                                                                       
+  private class DivideRight implements Divider {
+    private byte index;
+
+    public DivideRight(byte index) {
+      this.index = index;
+    }
+
+    public long divide(ChartState state) {
+      // TODO: figure out bit manipulations
+      return 0;
+      
+//      return (index < state.right.length) ?
+//          state.right.words[index] :
+//            (kCompleteAdd - state.left.full);
+    }                                                                                                
+  } 
+
+  /** TODO: I'm not sure that this is right **/
+  private static void Split(Divider divider, List<HypoState> hypos, List<VertexNode> extend) {
+    // Map from divider to index in extend.                                                            
+    HashMap<Long, Integer> lookup = new HashMap<Long, Integer>();
+    for (HypoState node: hypos) {
+      long key = divider.divide(node.state);
+      lookup.put(key, extend.size());
+      if (extend.size() > 0) {
+        extend.get(extend.size() - 1).appendHypothesis(node);
+      } else {
+        // extend[res.first->second].AppendHypothesis(*i);
+      }                                                                                                     }
+  }
 }

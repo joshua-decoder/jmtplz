@@ -120,7 +120,7 @@ public class Stacks {
     }
     edge.SetNote(note);
     // Include top scores.
-    edge.SetScore(hypos.Bound() + extensions.Bound());
+    edge.SetScore((hypos.Bound() + extensions.Bound()));
     edge.NT()[0] = hypos.RootAlternate();
     edge.NT()[1] = extensions.RootAlternate();
     out.AddEdge(edge);

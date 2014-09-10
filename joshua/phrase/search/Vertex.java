@@ -1,6 +1,6 @@
 package joshua.phrase.search;
 
-import joshua.phrase.decode.PartialEdge;
+// PORT: done
 
 public class Vertex {
 
@@ -9,7 +9,32 @@ public class Vertex {
   public Vertex() {
     root = new VertexNode();
   }
+  
+  public PartialVertex RootAlternate() {
+    return new PartialVertex(root);
+  }
 
+  public boolean Empty() {
+    return root.Empty();
+  }
+  
+  public float Bound() {
+    return root.getBound();
+  }
+  
+  public Note BestChild() {
+    PartialVertex top = new PartialVertex(RootAlternate());
+    if (top.Empty()) {
+      return new Note();
+    } else {
+      PartialVertex continuation = new PartialVertex();
+      while (! top.Complete()) {
+        top.Split(continuation);
+      }
+      return top.End();
+    }
+  }
+  
   public VertexNode getRoot() {
     return root;
   }
@@ -17,20 +42,4 @@ public class Vertex {
   public VertexNode Root() {
     return root;
   }
-
-  public boolean Empty() {
-    // TODO Auto-generated method stub
-    return false;
-  }
-
-  public PartialEdge RootAlternate() {
-    // TODO Auto-generated method stub
-    return null;
-  }
-
-  public int Bound() {
-    // TODO Auto-generated method stub
-    return 0;
-  }
-
 }

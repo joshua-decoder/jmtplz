@@ -1,5 +1,7 @@
 package joshua.phrase.search;
 
+// PORT: done
+
 import joshua.phrase.lm.ngram.State;
 
 public class DetermineSame<TSide extends State> {

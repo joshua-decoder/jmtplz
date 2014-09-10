@@ -1,10 +1,17 @@
 package joshua.phrase.search;
 
-import joshua.phrase.decode.Phrase;
+// PORT: done
+
 import joshua.phrase.lm.ngram.ChartState;
 
 public class HypoState {
+
+  // A bit of info for the search to keep track of
   public Note history = null;
-  public ChartState state = null; // lm::ngram::ChartState* pointer
-  public float score = 0.0f; // typedef float Score
+  
+  // lm::ngram::ChartState* pointer
+  public ChartState state = null;
+
+  // typedef float Score
+  public float score = 0.0f;
 }
