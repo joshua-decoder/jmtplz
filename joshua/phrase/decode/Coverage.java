@@ -22,4 +22,9 @@ public class Coverage {
     return 0;
   }
 
+  public void Set(int source_begin, int source_end) {
+    // TODO Auto-generated method stub
+    
+  }
+
 }
