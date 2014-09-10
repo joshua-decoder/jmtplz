@@ -31,3 +31,7 @@ install: libken.so $(EXES)
 	cp -f libken.so $(JMTPLZ)/lib/libken.so
 #	cp -f $(EXES) $(JMTPLZ)/bin/
 endif
+
+clean:
+	find . -name '*.o' -exec rm {} \;
+	rm libken.*

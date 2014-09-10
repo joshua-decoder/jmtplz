@@ -42,4 +42,11 @@ public class Phrase {
     return false;
   }
 
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    for (int i = 0; i < this.words.length; i++)
+      sb.append(i > 0 ? " " : "").append(String.format("%s/%d", Vocabulary.word(this.words[i]), this.words[i]));
+    return sb.toString();
+  }
+  
 }

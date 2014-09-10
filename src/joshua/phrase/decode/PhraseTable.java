@@ -19,7 +19,7 @@ public class PhraseTable {
   public PhraseTable(String file, Scorer scorer) throws IOException {
     maxSourcePhraseLength = 0;
     map = new HashMap<ArrayList<Integer>, TargetPhrases>();
-
+    
     BufferedReader br = new BufferedReader(new FileReader(file));
     String line;
     long previous_text_hash = 0;
@@ -46,6 +46,8 @@ public class PhraseTable {
       Phrase target = new Phrase(pipes[1].split(" "));
       HypoState hypo = new HypoState();
       hypo.history.set(target);
+      
+//      System.err.println(String.format("Read phrase '%s'", target));
 
       float parsed_score = scorer.parse(pipes[2]);
       hypo.score = parsed_score 

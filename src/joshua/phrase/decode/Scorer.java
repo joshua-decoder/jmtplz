@@ -1,55 +1,65 @@
 package joshua.phrase.decode;
 
 import joshua.FeatureVector;
+import joshua.Vocabulary;
 
 import joshua.decoder.ff.lm.kenlm.jni.KenLM;
 import joshua.phrase.lm.ngram.ChartState;
 
 public class Scorer {
-  
+
   private FeatureVector weights;
   private KenLM model;
-  
+
   public Scorer(String lm_file, String weights_file) {
     weights = new FeatureVector();
     weights.readFromFile(weights_file);
-    
-    this.model = new KenLM(3, lm_file, true);
+
+    this.model = new KenLM(5, lm_file, true);
+
+    // The global vocabulary needs to know about language models so that it can map from the 
+    // global IDs to the LM's private vocabulary
+    Vocabulary.registerLanguageModel(this.model);
+    System.err.println(String.format("Loaded a %d-gram language model from '%s'",
+        this.model.getOrder(), lm_file));
   }
-  
+
   public float parse(String features) {
     int index = 0;
     float sum = 0.0f;
-    for (String valuestr: features.split(" ")) {
+    for (String valuestr : features.split(" ")) {
       float value = Float.parseFloat(valuestr);
       sum += value * weights.get(String.format("tm_%d", index));
       index++;
     }
-    
+
     return sum;
   }
 
   public FeatureVector getWeights() {
     return weights;
   }
-  
+
   public KenLM languageModel() {
     return model;
   }
-  
+
   public float LM(int is, ChartState state) {
     return LM(new int[] { is }, state);
   }
-  
+
   public float LM(int[] is, ChartState state) {
-    return model.prob(is);
+    float prob = model.prob(is);
+    System.err.println(String.format("prob(%s,%d) = %.3f", Vocabulary.getWords(is), is.length, prob));
+    return prob;
   }
 
   public float TargetWordCount(int num_words) {
     return weights.get("target_word_insertion");
   }
-  
-  public float transition(Hypothesis hypothesis, TargetPhrases phrases, int source_begin, int source_end) {
+
+  public float transition(Hypothesis hypothesis, TargetPhrases phrases, int source_begin,
+      int source_end) {
     int jump_size = Math.abs(hypothesis.lastSourceIndex() - source_begin);
     return (jump_size * weights.get("distortion"));
   }
