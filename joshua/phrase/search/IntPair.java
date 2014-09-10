@@ -1,11 +1,11 @@
 package joshua.phrase.search;
 
 public class IntPair {
-  int begin;
-  int end;
+  public int first;
+  public int second;
   
   public IntPair(int begin, int end) {
-    this.begin = begin;
-    this.end = end;
+    this.first = begin;
+    this.second = end;
   }
 }

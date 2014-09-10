@@ -2,6 +2,7 @@ package joshua;
 
 import joshua.NGramLanguageModel;
 import joshua.KenLMState;
+import joshua.phrase.lm.ngram.Right;
 
 /**
  * JNI wrapper for KenLM. This version of KenLM supports two use cases, implemented by the separate
@@ -144,5 +145,10 @@ public class KenLM implements NGramLanguageModel, Comparable<KenLM> {
   @Override
   public boolean isMinimizing() {
     return minimizing;
+  }
+
+  public Right beginSentenceState() {
+    System.err.println("beginSentenceState() not implemented");
+    return null;
   }
 }

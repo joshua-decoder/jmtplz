@@ -1,5 +1,6 @@
 package joshua.phrase.search;
 
+import joshua.phrase.decode.Phrase;
 import joshua.phrase.lm.ngram.ChartState;
 
 public class HypoState<T> {

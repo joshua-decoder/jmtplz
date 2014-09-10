@@ -5,6 +5,7 @@ import java.util.Vector;
 import joshua.FeatureVector;
 import joshua.KenLM;
 import joshua.phrase.lm.ngram.ChartState;
+import joshua.phrase.lm.ngram.Model;
 
 public class Scorer {
 

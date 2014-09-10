@@ -8,4 +8,19 @@ public class Chart {
 
   }
 
+  public int SentenceLength() {
+    // TODO Auto-generated method stub
+    return 0;
+  }
+
+  public int MaxSourcePhraseLength() {
+    // TODO Auto-generated method stub
+    return 0;
+  }
+
+  public TargetPhrases Range(int begin, int i) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
 }

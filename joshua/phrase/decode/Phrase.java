@@ -1,6 +1,7 @@
 package joshua.phrase.decode;
 
 import joshua.Vocabulary;
+import joshua.phrase.util.Pool;
 
 // currently this is an unoptimized implementation
 public class Phrase {
@@ -10,6 +11,10 @@ public class Phrase {
 
   public Phrase(int word) {
     this.words = new int[] { word };
+  }
+  
+  public Phrase(String word) {
+    this.words = new int[] { Vocabulary.id(word) };
   }
   
   public Phrase(String[] words) {
@@ -26,6 +31,11 @@ public class Phrase {
 
   public int size() {
     return words.length;
+  }
+
+  public long[] Base() {
+    // TODO Auto-generated method stub
+    return null;
   }
 
 }
