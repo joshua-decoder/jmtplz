@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<!-- Build file for Joshua. -->
+<project name="Joshua Machine Translation Toolkit" default="all" basedir=".">
+
+  <!-- ~~~~~ Properties, Paths, etc ~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+  <property environment="env" />
+
+  <property name="JMTPLZ" value="${basedir}" />
+  <property name="src" value="${JMTPLZ}/src" />
+  <property name="build" value="${JMTPLZ}/class" />
+  <property name="lib" value="${JMTPLZ}/lib" />
+  <property name="doc" value="${JMTPLZ}/doc" />
+
+  <property name="cli" value="commons-cli-1.2.jar"/>
+
+  <path id="compile.all.classpath">
+    <fileset dir="${lib}">
+      <include name="${cli}" />
+      <!-- Jung uses a BSD-like license, see ./lib/LICENSES/LICENSE-jung.txt -->
+      <include name="collections-generic-4.01.jar" />
+      <include name="junit-4.10.jar" />
+    </fileset>
+  </path>
+
+  <!-- ~~~~~ Init build task ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+  <!-- Create the build directory for compiled class files -->
+  <target name="init" depends="check-joshua-home">
+  </target>
+
+  <!-- Check for environment variables -->
+  <target name="check-joshua-home">
+    <echo message="JMTPLZ = ${JMTPLZ} basedir = ${basedir}" />
+    <!-- <if> -->
+    <!--   <not> -->
+    <!--     <equals arg1="${JMTPLZ}" arg2="${basedir}" /> -->
+    <!--   </not> -->
+    <!--   <then> -->
+    <!--     <fail message="WARNING: $JMTPLZ environment variable overrident to ${basedir}" /> -->
+    <!--   </then> -->
+    <!-- </if> -->
+  </target>
+
+  <target name="set-joshua-version" unless="env.JMTPLZ_VERSION">
+    <fail message="Please set the $JMTPLZ_VERSION environment variable." />
+  </target>
+
+  <target name="set-java-home" unless="env.JAVA_HOME">
+    <fail message="Please set the $JAVA_HOME environment variable." />
+    <!-- TODO: add suggestion to use /System/Library/Frameworks/JavaVM.framework/Home/ iff on OSX -->
+  </target>
+
+  <target name="kenlm" depends="check-joshua-home">
+    <exec executable="make">
+      <arg value="-j" />
+      <arg value="4" />
+      <arg value="-C" />
+      <arg value="${src}/joshua/phrase/lm" />
+    </exec>
+  </target>
+
+  <!-- ~~~~~ Java build tasks ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+  <target name="all" depends="jar, kenlm">
+  </target>
+
+  <target name="devel" depends="init, java, kenlm">
+  </target>
+
+  <!-- Compile the Java code. -->
+  <target name="java" depends="check-joshua-home">
+    <mkdir dir="${build}" />
+    <javac compiler="javac1.7" srcdir="${src}" destdir="${build}" classpathref="compile.all.classpath" debug="on" encoding="utf8" sourcepath="" includeantruntime="false">
+      <!-- We nullify the sourcepath in order to disable Ant's usual resolution mechanism. This makes it an error for our basic code to call into code that has external dependencies, rather than auto-including those files and then having a classpath error. -->
+      <include name="**/*.java" />
+
+      <!-- This should be on, so people see it. But it can be quite verbose...
+      <compilerarg value="-deprecation"/>
+      -->
+    </javac>
+  </target>
+
+  <!-- Create a JAR file -->
+  <target name="jar" depends="java,check-joshua-home">
+    <jar destfile="${build}/joshua.jar" index="true">
+      <fileset dir="${build}">
+        <include name="**/*.class" />
+      </fileset>
+      <manifest>
+        <attribute name="Main-Class" value="joshua.decoder.JoshuaDecoder" />
+      </manifest>
+    </jar>
+  </target>
+
+  <!-- Create a JAR file of the source code -->
+  <target name="source-jar">
+    <jar destfile="${build}/joshua-src.jar">
+      <fileset dir="${build}">
+        <include name="**/*.java" />
+      </fileset>
+    </jar>
+  </target>
+
+  <!-- ~~~~~ Cleaning tasks ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+  <!-- Delete the compiled files -->
+  <target name="clean" depends="clean-thrax,clean-java">
+    <exec executable="make">
+      <arg value="-C" />
+      <arg value="clean" />
+    </exec>
+    <exec executable="/bin/bash" dir="src/kenlm">
+      <arg value="clean" />
+    </exec>
+    <delete file="${lib}/libken.so" />
+    <delete dir="doc/html" />
+    <delete dir="doc/latex" />
+  </target>
+
+  <!-- Delete just the java files -->
+  <target name="clean-java">
+    <delete verbose="true" quiet="true">
+      <fileset dir="${build}">
+        <include name="**/*.class" />
+      </fileset>
+    </delete>
+  </target>
+
+  <target name="clean-thrax">
+      <delete verbose="true" quiet="true">
+      <fileset dir="${thraxlib}">
+        <include name="**/*.class"/>
+      </fileset>
+    </delete>
+  </target>
+
+  <!-- EXPERIMENTAL: Delete *all* generated files -->
+  <target name="distclean" depends="clean">
+    <!-- BUG: this doesn't delete empty folders (neither ${build} itself, nor the class dirs (the latter makes sense since we don't traverse them)) -->
+    <delete verbose="true" quiet="true" includeEmptyDirs="true">
+      <fileset dir="${build}">
+        <include name="joshua.jar" />
+        <include name="joshua-ui.jar" />
+      </fileset>
+    </delete>
+
+    <!-- HACK: these two work perfectly, but maybe problematic if people reset ${test} or ${doc} -->
+    <delete verbose="true" quiet="true" includeEmptyDirs="true">
+      <fileset dir="${test}-output" />
+    </delete>
+
+    <delete verbose="true" quiet="true" includeEmptyDirs="true">
+      <fileset dir="${doc}" includes="**/*.tmp" />
+      <fileset dir="${doc}/html" />
+      <fileset dir="${doc}/latex" />
+    </delete>
+
+    <delete verbose="true" quiet="true" file="joshua-fb.xml" />
+
+  </target>
+
+
+  <!-- Delete *all* generated files,
+       including files and directories not tracked by git -->
+  <target name="devel-clean">
+
+    <input
+      message="WARNING: all untracked, ignored files will be removed. Continue? (y/n) "
+      validargs="y,n"
+      addproperty="do.delete"
+    />
+    <condition property="do.abort">
+      <equals arg1="n" arg2="${do.delete}"/>
+    </condition>
+    <fail if="do.abort">Build aborted by user.</fail>
+
+    <!-- Delete untracked, ignored files and directories. -->
+    <exec executable="git">
+      <arg value="clean" />
+      <arg value="-fdX" />
+    </exec>
+  </target>
+
+  <!-- ~~~~~ Javadoc ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+  <!-- Compile the Javadocs into web pages -->
+  <target name="javadoc">
+    <mkdir dir="${doc}" />
+    <javadoc packagenames="joshua.*" classpath="${cli}" sourcepath="${src}" destdir="${doc}" author="true" version="true" charset="utf-8" overview="src/overview.html">
+      <link href="http://java.sun.com/j2se/1.5.0/docs/api" />
+      <link href="http://commons.apache.org/cli/api-release" />
+    </javadoc>
+  </target>
+
+</project>

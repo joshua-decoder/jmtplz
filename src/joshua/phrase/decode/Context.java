@@ -1,7 +1,6 @@
 package joshua.phrase.decode;
 
 import joshua.JoshuaConfiguration;
-import joshua.Vocabulary;
 
 public class Context {
   

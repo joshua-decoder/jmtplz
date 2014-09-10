@@ -1,4 +1,4 @@
-package joshua;
+package joshua.decoder.ff.lm.kenlm.jni;
 
 import joshua.NGramLanguageModel;
 import joshua.KenLMState;

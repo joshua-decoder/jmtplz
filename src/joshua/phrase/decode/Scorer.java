@@ -1,7 +1,8 @@
 package joshua.phrase.decode;
 
 import joshua.FeatureVector;
-import joshua.KenLM;
+
+import joshua.decoder.ff.lm.kenlm.jni.KenLM;
 import joshua.phrase.lm.ngram.ChartState;
 
 public class Scorer {
@@ -9,8 +10,11 @@ public class Scorer {
   private FeatureVector weights;
   private KenLM model;
   
-  public Scorer(String model, String weights_file) {
+  public Scorer(String lm_file, String weights_file) {
+    weights = new FeatureVector();
     weights.readFromFile(weights_file);
+    
+    this.model = new KenLM(3, lm_file, true);
   }
   
   public float parse(String features) {
@@ -18,7 +22,7 @@ public class Scorer {
     float sum = 0.0f;
     for (String valuestr: features.split(" ")) {
       float value = Float.parseFloat(valuestr);
-      sum += value * weights.get(String.format("tm_", index));
+      sum += value * weights.get(String.format("tm_%d", index));
       index++;
     }
     

@@ -21,13 +21,13 @@ libken.dylib: $(CORE) $(HEADERS) jni/wrap.cc
 	g++ -I /System/Library/Frameworks/JavaVM.framework/Versions/A/Headers -DNO_ICU $(CPPFLAGS) jni/wrap.cc -I/System/Library/Frameworks/JavaVM.framework/Home/include -I/System/Library/Frameworks/JavaVM.framework/Home/include/linux $(CORE) -fpic -dynamiclib -Wl,-headerpad_max_install_names,-undefined,dynamic_lookup -o libken.dylib -lz -Wno-deprecated -pthread
 
 install: libken.dylib $(EXES)
-	cp -f libken.dylib $(JOSHUA)/lib/
-	cp -f $(EXES) $(JOSHUA)/bin/
+	cp -f libken.dylib $(JMTPLZ)/lib/
+#	cp -f $(EXES) $(JMTPLZ)/bin/
 else
 libken.so: $(CORE) $(HEADERS) jni/wrap.cc
 	g++ -I. -DNO_ICU $(CPPFLAGS) jni/wrap.cc -I$(JAVA_HOME)/include -I$(JAVA_HOME)/include/linux $(CORE) -fpic -shared -Wl,-soname,libken.so -o libken.so -lz -Wno-deprecated -pthread $(RT)
 
 install: libken.so $(EXES)
-	cp -f libken.so $(JOSHUA)/lib/libken.so
-	cp -f $(EXES) $(JOSHUA)/bin/
+	cp -f libken.so $(JMTPLZ)/lib/libken.so
+#	cp -f $(EXES) $(JMTPLZ)/bin/
 endif
