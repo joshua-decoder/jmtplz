@@ -74,10 +74,10 @@ public class Stacks {
     // The search algorithm will attempt to find the best hypotheses in the "cross product" of these two sets.
     // TODO: Maybe this should belong to the phrase table.  It's constant.
     Vertex eos_vertex = new Vertex();
-    HypoState<Phrase> eos_hypo = new HypoState<Phrase>();
+    HypoState eos_hypo = new HypoState();
     Phrase eos_phrase = new Phrase("</s>");
 
-    eos_hypo.history = eos_phrase;
+    eos_hypo.history.set(eos_phrase);
     eos_hypo.score = context.GetScorer().LM(eos_phrase.getWords(), eos_hypo.state);
     eos_vertex.Root().appendHypothesis(eos_hypo);
     eos_vertex.Root().finishRoot(kPolicy.Left);
@@ -99,8 +99,8 @@ public class Stacks {
   }
   
   public static void AddHypothesisToVertex(Hypothesis hypothesis, float score_delta, Vertex vertex) {
-    HypoState<Hypothesis> add = new HypoState<Hypothesis>();
-    add.history = hypothesis;
+    HypoState add = new HypoState();
+    add.history.set(hypothesis);
     add.state.right = hypothesis.State();
     add.state.left.length = 0;
     add.state.left.full = true;
@@ -127,14 +127,14 @@ public class Stacks {
   }
 
   public static void AppendToStack(PartialEdge complete, Stack out) {
-    IntPair source_range = (IntPair)complete.GetNote().getValue();
+    IntPair source_range = (IntPair)complete.GetNote().get();
     // The note for the first NT is the hypothesis.  The note for the second
     // NT is the target phrase.
     out.add(new Hypothesis(complete.CompletedState().right,
           complete.GetScore(), // TODO: call scorer to adjust for last of lexro?
-          (Hypothesis)(complete.NT()[0].End().getValue()),
+          (Hypothesis)(complete.NT()[0].End().get()),
           source_range.first,
           source_range.second,
-          (Phrase)complete.NT()[1].End().getValue()));
+          (Phrase)complete.NT()[1].End().get()));
   }
 }

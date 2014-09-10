@@ -44,8 +44,8 @@ public class PhraseTable {
         previous_text_hash = source_text_hash;
       }
       Phrase target = new Phrase(pipes[1].split(" "));
-      HypoState<Phrase> hypo = new HypoState<Phrase>();
-      hypo.history = target;
+      HypoState hypo = new HypoState();
+      hypo.history.set(target);
 
       float parsed_score = scorer.parse(pipes[2]);
       hypo.score = parsed_score 

@@ -17,8 +17,8 @@ public class TargetPhrases {
 
   public void MakePassThrough(Scorer scorer, int word) {
     Phrase target = new Phrase(word);
-    HypoState<Phrase> hypo = new HypoState<Phrase>();
-    hypo.history = target;
+    HypoState hypo = new HypoState();
+    hypo.history.set(target);
     hypo.score = scorer.passThrough()
         + scorer.LM(word, hypo.state) 
         + scorer.targetWordCount(1);

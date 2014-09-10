@@ -1,5 +1,7 @@
 package joshua.phrase.search;
 
+import joshua.phrase.decode.Hypothesis;
+
 public class Note {
   public Object value;
   
@@ -10,7 +12,11 @@ public class Note {
     this.value = value;
   }
   
-  public Object getValue() {
+  public Object get() {
     return value;
+  }
+
+  public void set(Object object) {
+    this.value = object;
   }
 }
