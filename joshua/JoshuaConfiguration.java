@@ -14,6 +14,7 @@ public class JoshuaConfiguration {
   public static final int KENLM_MAX_ORDER = 3;
   
   public int reordering_limit = 3;
+  public int pop_limit = 0; // todo
 
   public JoshuaConfiguration() {
   }

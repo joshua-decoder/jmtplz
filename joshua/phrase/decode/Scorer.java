@@ -1,13 +1,15 @@
 package joshua.phrase.decode;
 
+import joshua.Vocabulary;
 import joshua.phrase.lm.ngram.ChartState;
 import joshua.phrase.lm.ngram.Model;
 
 public class Scorer {
 
-  public Scorer() {
+  public Scorer(String lm, String weights_file, Vocabulary vocab) {
+    // TODO Auto-generated constructor stub
   }
-  
+
   public Model LanguageModel() {
     return null;
   }

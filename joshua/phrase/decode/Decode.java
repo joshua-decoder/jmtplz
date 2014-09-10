@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import joshua.JoshuaConfiguration;
 import joshua.Vocabulary;
 import joshua.phrase.util.SlowHashMapVocabulary;
 
@@ -80,9 +81,8 @@ public class Decode {
   }
 
   public static void main(String[] args) throws IOException {
-    Vocabulary vocab = new SlowHashMapVocabulary();
-    Scorer scorer = new Scorer();
-    PhraseTable ptable = new PhraseTable("phrases.en-it.txt", vocab, scorer);
+    Context context = new Context("lm.arpa", "weights.txt", new JoshuaConfiguration());
+    PhraseTable ptable = new PhraseTable("phrases.en-it.txt", context.GetVocab(), context.GetScorer());
     System.out.println("longest source phrase: " + ptable.getMaxSourcePhraseLength());
   }
 }
