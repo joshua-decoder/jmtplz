@@ -1,7 +1,6 @@
 package joshua.phrase.decode;
 
 import joshua.phrase.lm.ngram.ChartState;
-import joshua.phrase.search.IntPair;
 import joshua.phrase.search.Note;
 import joshua.phrase.search.PartialVertex;
 
