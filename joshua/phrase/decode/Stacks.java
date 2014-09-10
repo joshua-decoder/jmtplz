@@ -2,12 +2,12 @@ package joshua.phrase.decode;
 
 import java.util.List;
 
+import joshua.phrase.search.EdgeGenerator;
 import joshua.phrase.search.HypoState;
 import joshua.phrase.search.IntPair;
 import joshua.phrase.search.Note;
 import joshua.phrase.search.Vertex;
 import joshua.phrase.search.kPolicy;
-import joshua.phrase.util.Pool;
 
 // complete except for resize todo
 

@@ -1,18 +1,13 @@
 package joshua.phrase.decode;
 
-import java.util.Vector;
-
 import joshua.FeatureVector;
 import joshua.KenLM;
 import joshua.phrase.lm.ngram.ChartState;
-import joshua.phrase.lm.ngram.Model;
 
 public class Scorer {
-
+  
   private FeatureVector weights;
   private KenLM model;
-  private Vector<Integer> word_mapping;
-  
   
   public Scorer(String model, String weights_file) {
     weights.readFromFile(weights_file);
@@ -46,7 +41,7 @@ public class Scorer {
     return model.prob(is);
   }
 
-  public float targetWordCount(int num_words) {
+  public float TargetWordCount(int num_words) {
     return weights.get("target_word_insertion");
   }
   

@@ -3,6 +3,7 @@ package joshua.phrase.decode;
 import java.util.HashMap;
 import java.util.Map;
 
+import joshua.phrase.search.EdgeGenerator;
 import joshua.phrase.search.IntPair;
 import joshua.phrase.search.Note;
 import joshua.phrase.search.Vertex;

@@ -9,7 +9,7 @@ public class Coverage {
     bits = 0;
   }
   
-  public void set(int begin, int end) {
+  public void Set(int begin, int end) {
     assert compatible(begin, end);
     if (begin == firstZero) {
       firstZero = end;
@@ -32,7 +32,7 @@ public class Coverage {
     return firstZero;
   }
   
-  public int leftOpen(int begin) {
+  public int LeftOpen(int begin) {
     for (int i = begin - firstZero; i > 0; --i) {
       if (((bits & (1L << i)) != 0)) {
         assert compatible(i + firstZero + 1, begin);
@@ -45,7 +45,7 @@ public class Coverage {
     return firstZero;
   }
   
-  public int rightOpen(int end, int sentenceLength) {
+  public int RightOpen(int end, int sentenceLength) {
     for (int i = end - firstZero; i < Math.min(64, sentenceLength - firstZero); i++) {
       if ( (bits & (1L << i)) != 0) {
         return i + firstZero;
@@ -59,5 +59,4 @@ public class Coverage {
     assert end - firstZero < 64;
     return (1L << (end - firstZero)) - (1L << (begin - firstZero));
   }
-  
 }

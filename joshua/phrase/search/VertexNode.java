@@ -7,7 +7,6 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Vector;
 
 import joshua.phrase.lm.ngram.ChartState;
 import joshua.phrase.lm.ngram.Left;

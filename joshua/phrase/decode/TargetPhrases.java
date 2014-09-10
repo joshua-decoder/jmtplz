@@ -21,7 +21,7 @@ public class TargetPhrases {
     hypo.history.set(target);
     hypo.score = scorer.passThrough()
         + scorer.LM(word, hypo.state) 
-        + scorer.targetWordCount(1);
+        + scorer.TargetWordCount(1);
     
   }
   

@@ -1,4 +1,8 @@
-package joshua.phrase.decode;
+package joshua.phrase.search;
+
+import joshua.phrase.decode.EdgeOutput;
+import joshua.phrase.decode.PartialEdge;
+import joshua.phrase.decode.PickBest;
 
 public class EdgeGenerator {
 

@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Vector;
 
 import joshua.Vocabulary;
 import joshua.phrase.search.HypoState;
@@ -15,17 +14,17 @@ import joshua.phrase.search.kPolicy;
 public class PhraseTable {
 
   private int maxSourcePhraseLength;
-  private Map<Vector<Integer>, Entry> map; // unoptimized
+  private Map<ArrayList<Integer>, TargetPhrases> map; // unoptimized
 
   public PhraseTable(String file, Scorer scorer) throws IOException {
     maxSourcePhraseLength = 0;
-    map = new HashMap<Vector<Integer>, Entry>();
+    map = new HashMap<ArrayList<Integer>, TargetPhrases>();
 
     BufferedReader br = new BufferedReader(new FileReader(file));
     String line;
     long previous_text_hash = 0;
-    Entry entry = null;
-    Vector<Integer> source = new Vector<Integer>();
+    TargetPhrases entry = null;
+    ArrayList<Integer> source = new ArrayList<Integer>();
     while ((line = br.readLine()) != null) {
       String[] pipes = line.split("\\s*\\|\\|\\|\\s*"); // split ||| and trim
       long source_text_hash = pipes[0].hashCode(); // todo: murmur hash
@@ -38,8 +37,9 @@ public class PhraseTable {
         }
         maxSourcePhraseLength = Math.max(maxSourcePhraseLength, source.size());
         if (!map.containsKey(source))
-          map.put(source, new Entry());
+          map.put(source, new TargetPhrases());
         entry = map.get(source);
+
         entry.getVertex().getRoot().initRoot();
         previous_text_hash = source_text_hash;
       }
@@ -50,7 +50,7 @@ public class PhraseTable {
       float parsed_score = scorer.parse(pipes[2]);
       hypo.score = parsed_score 
           + scorer.LM(target.getWords(), hypo.state) // c++: target.begin(), target.end()
-          + scorer.targetWordCount(target.size());
+          + scorer.TargetWordCount(target.size());
 
       entry.getVertex().getRoot().appendHypothesis(hypo);
     }
@@ -62,7 +62,8 @@ public class PhraseTable {
   public int getMaxSourcePhraseLength() {
     return maxSourcePhraseLength;
   }
-
-  private class Entry extends TargetPhrases { // typedef lol
+  
+  public TargetPhrases Phrases(Long long1, long l) {
+    return null; // todo
   }
 }

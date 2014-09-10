@@ -1,7 +1,6 @@
 package joshua.phrase.decode;
 
 import joshua.Vocabulary;
-import joshua.phrase.util.Pool;
 
 // currently this is an unoptimized implementation
 public class Phrase {
@@ -36,6 +35,11 @@ public class Phrase {
   public long[] Base() {
     // TODO Auto-generated method stub
     return null;
+  }
+
+  public boolean Valid() {
+    // TODO Auto-generated method stub
+    return false;
   }
 
 }
