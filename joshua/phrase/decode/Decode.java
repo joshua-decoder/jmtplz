@@ -8,7 +8,6 @@ import java.util.List;
 
 import joshua.JoshuaConfiguration;
 import joshua.Vocabulary;
-import joshua.phrase.util.SlowHashMapVocabulary;
 
 public class Decode {
 
