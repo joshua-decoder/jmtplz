@@ -14,16 +14,16 @@ import joshua.phrase.search.kPolicy;
 public class PhraseTable {
 
   private int maxSourcePhraseLength;
-  private Map<Long, Entry> map; // unoptimized
+  private Map<Long, TargetPhrases> map; // unoptimized
 
   public PhraseTable(String file, Vocabulary vocab, Scorer scorer) throws IOException {
     maxSourcePhraseLength = 0;
-    map = new HashMap<Long, Entry>();
+    map = new HashMap<Long, TargetPhrases>();
 
     BufferedReader br = new BufferedReader(new FileReader(file));
     String line;
     long previous_text_hash = 0;
-    Entry entry = null;
+    TargetPhrases entry = null;
     ArrayList<Long> source = new ArrayList<Long>();
     while ((line = br.readLine()) != null) {
       String[] pipes = line.split("\\s*\\|\\|\\|\\s*"); // split ||| and trim
@@ -38,7 +38,7 @@ public class PhraseTable {
         maxSourcePhraseLength = Math.max(maxSourcePhraseLength, source.size());
         long hash = hashWords(source);
         if (!map.containsKey(hash)) {
-          entry = new Entry();
+          entry = new TargetPhrases();
           map.put(hash, entry);
         } else {
           entry = map.get(hash);
@@ -74,7 +74,8 @@ public class PhraseTable {
   public int getMaxSourcePhraseLength() {
     return maxSourcePhraseLength;
   }
-
-  private class Entry extends TargetPhrases { // typedef lol
+  
+  public TargetPhrases Phrases(Long long1, long l) {
+    return null; // todo
   }
 }
