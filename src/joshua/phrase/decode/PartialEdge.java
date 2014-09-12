@@ -4,54 +4,40 @@ import joshua.phrase.lm.ngram.ChartState;
 import joshua.phrase.search.Note;
 import joshua.phrase.search.PartialVertex;
 
-public class PartialEdge {
+public class PartialEdge extends Header {
 
-  public PartialEdge(Object allocateEdge) {
-    // TODO Auto-generated constructor stub
-  }
-
+  private PartialVertex[] vertex;
+  private ChartState[] between;
+  
   public PartialEdge() {
-    // TODO Auto-generated constructor stub
+    super();
   }
-
-  public ChartState[] Between() {
-    // TODO Auto-generated method stub
-    return null;
-  }
-
-  public void SetNote(Note note) {
-    // TODO Auto-generated method stub
+  
+  public PartialEdge(int num_vertices) {
+    super(num_vertices);
     
+    vertex = new PartialVertex[num_vertices];
   }
+  
+  public PartialEdge(int num_vertices, int num_states) {
+    super(num_vertices);
 
-  public void SetScore(float i) {
-    // TODO Auto-generated method stub
+    vertex = new PartialVertex[num_vertices];
     
+    
+    between = new ChartState[num_states];
   }
-
+  
   public PartialVertex[] NT() {
-    // TODO Auto-generated method stub
-    return null;
-  }
-
-  public boolean Valid() {
-    // TODO Auto-generated method stub
-    return false;
-  }
-
-  public Note GetNote() {
-    // TODO Auto-generated method stub
-    return null;
+    return vertex;
   }
 
   public ChartState CompletedState() {
-    // TODO Auto-generated method stub
-    return null;
+    return between[0];
   }
-
-  public float GetScore() {
-    // TODO Auto-generated method stub
-    return 0;
+  
+  public ChartState[] Between() {
+    return between;
   }
 
   public Note End() {

@@ -40,6 +40,8 @@ public class KenLM implements NGramLanguageModel, Comparable<KenLM> {
   private final static native float prob(long ptr, int words[]);
 
   private final static native StateProbPair probRule(long ptr, long pool, long words[]);
+  
+  private final static native StateProbPair beginSentence(long ptr, long pool);
 
   private final static native float probString(long ptr, int words[], int start);
 
@@ -88,7 +90,6 @@ public class KenLM implements NGramLanguageModel, Comparable<KenLM> {
    */
   public StateProbPair probRule(long[] words, long poolPointer) {
 
-
     StateProbPair pair = null;
     try {
       pair = probRule(pointer, poolPointer, words);
@@ -97,6 +98,11 @@ public class KenLM implements NGramLanguageModel, Comparable<KenLM> {
       System.exit(1);
     }
 
+    return pair;
+  }
+  
+  public StateProbPair beginSentence(long poolPointer) {
+    StateProbPair pair = beginSentence(pointer, poolPointer);
     return pair;
   }
 
@@ -147,7 +153,7 @@ public class KenLM implements NGramLanguageModel, Comparable<KenLM> {
     return minimizing;
   }
 
-  public Right beginSentenceState() {
+  public Right BeginSentenceState() {
     System.err.println("beginSentenceState() not implemented");
     return null;
   }

@@ -368,4 +368,18 @@ JNIEXPORT jobject JNICALL Java_joshua_decoder_ff_lm_kenlm_jni_KenLM_probRule(
   return env->NewObject(base->ChartPair(), base->ChartPairInit(), (long)outStatePtr, prob);
 }
 
+JNIEXPORT jobject JNICALL Java_joshua_decoder_ff_lm_kenlm_jni_KenLM_beginSentence(
+  JNIEnv *env, jclass, jlong pointer, jlong chartPtr) {
+
+  // Compute the probability
+    const VirtualBase *base = reinterpret_cast<const VirtualBase*>(pointer);
+  lm::ngram::State outState = base->BeginSentence();
+
+  Chart* chart = reinterpret_cast<Chart*>(chartPtr);
+  lm::ngram::ChartState* outStatePtr = chart->put(outState);
+
+  // Call back constructor to allocate a new instance, with an int argument
+  return env->NewObject(base->ChartPair(), base->ChartPairInit(), (long)outStatePtr, prob);
+}
+
 } // extern

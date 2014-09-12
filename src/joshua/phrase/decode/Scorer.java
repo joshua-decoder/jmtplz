@@ -40,7 +40,7 @@ public class Scorer {
     return weights;
   }
 
-  public KenLM languageModel() {
+  public KenLM LanguageModel() {
     return model;
   }
 
@@ -48,6 +48,14 @@ public class Scorer {
     return LM(new int[] { is }, state);
   }
 
+  /**
+   * Provides preliminary scoring for a phrase by scoring each word with only words from that
+   * phrase as history.
+   * 
+   * @param is a sequence of word IDs
+   * @param state the chart state (unused)
+   * @return the language model probability of the phrase
+   */
   public float LM(int[] is, ChartState state) {
     float prob = model.prob(is);
     System.err.println(String.format("prob(%s,%d) = %.3f", Vocabulary.getWords(is), is.length, prob));
@@ -55,7 +63,7 @@ public class Scorer {
   }
 
   public float TargetWordCount(int num_words) {
-    return weights.get("target_word_insertion");
+    return weights.get("target_word_insertion") * num_words;
   }
 
   public float transition(Hypothesis hypothesis, TargetPhrases phrases, int source_begin,

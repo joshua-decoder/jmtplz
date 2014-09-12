@@ -26,7 +26,7 @@ public class Stacks {
     for (int i = 0; i < chart.SentenceLength() + 2; i++)
       stacks.add(new Stack());
     // Initialize root hypothesis with <s> context and future cost for everything.
-    stacks.get(0).add(new Hypothesis(context.GetScorer().languageModel().beginSentenceState(), future.Full()));
+    stacks.get(0).add(new Hypothesis(context.GetScorer().LanguageModel().BeginSentenceState(), future.Full()));
     // Decode with increasing numbers of source words.
     for (int source_words = 1; source_words <= chart.SentenceLength(); ++source_words) {
       Vertices vertices = new Vertices();
@@ -114,7 +114,7 @@ public class Stacks {
   public static void AddEdge(Vertex hypos, Vertex extensions, Note note, EdgeGenerator out) {
     hypos.Root().finishRoot(kPolicy.Right);
     if (hypos.Empty()) return;
-    PartialEdge edge = new PartialEdge(out.AllocateEdge(2));
+    PartialEdge edge = new PartialEdge();
     // Empty LM state before/between/after
     for (int j = 0; j < 3; ++j) {
       edge.Between()[j].left.length = 0;
