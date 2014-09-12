@@ -1,8 +1,12 @@
 package joshua.phrase.decode;
 
+// PORT: done
+
+import java.util.Comparator;
+
 import joshua.phrase.search.Note;
 
-public class Header {
+public class Header implements Comparable<Header>, Comparator<Header> {
   private float score;
   private int arity;
   private Note note;
@@ -19,15 +23,7 @@ public class Header {
   public void SetScore(float score) {
     this.score = score;
   }
-  
-  public boolean lessThan(Header other) {
-    return this.GetScore() < other.GetScore();
-  }
-  
-  public boolean greaterThan(Header other) {
-    return this.GetScore() > other.GetScore();
-  }
-  
+
   public int GetArity() { return arity; }
   
   public Note GetNote() { return note; }
@@ -50,5 +46,19 @@ public class Header {
     this.score = 0.0f;
     this.arity = arity;
     this.note = null;
+  }
+
+  @Override
+  public int compareTo(Header other) {
+    if (this.GetScore() < other.GetScore())
+      return -1;
+    else if (this.GetScore() > other.GetScore())
+      return 1;
+    return 0;
+  }
+  
+  @Override
+  public int compare(Header arg0, Header arg1) {
+    return arg0.compareTo(arg1);
   }
 }

@@ -1,5 +1,7 @@
 package joshua.phrase.decode;
 
+// PORT: done
+
 import joshua.phrase.lm.ngram.ChartState;
 import joshua.phrase.search.Note;
 import joshua.phrase.search.PartialVertex;
@@ -44,10 +46,4 @@ public class PartialEdge extends Header {
     // TODO Auto-generated method stub
     return null;
   }
-
-  public int compareTo(PartialEdge best) {
-    // TODO Auto-generated method stub
-    return 0;
-  }
-
 }

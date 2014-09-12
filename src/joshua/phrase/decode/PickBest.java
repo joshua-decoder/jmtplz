@@ -1,6 +1,6 @@
 package joshua.phrase.decode;
 
-// complete
+// PORT: done
 
 public class PickBest {
   
@@ -15,7 +15,7 @@ public class PickBest {
   }
   
   public void NewHypothesis(PartialEdge complete) {
-    if (!best.Valid() || complete.compareTo(best) > 0) {
+    if (!best.Valid() || complete.compareTo(best) == 1) {
       best = complete;
     }
   }
