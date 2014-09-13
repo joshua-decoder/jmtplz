@@ -128,12 +128,7 @@ public class FeatureVector {
     if (features.containsKey(feature))
       return features.get(feature);
 
-    throw new RuntimeException(
-        "Error : unknown feature "
-            + feature
-            + " Beware: The behavior has been changed.\n"
-            + "This method no longer returns 0 for non-present features. Instead it is the responsibility of the querying function to make "
-            + "sure the value exists before requesting it");
+    throw new RuntimeException(String.format("ERROR: unknown feature '%s'", feature));
   }
 
   public void put(String feature, float value) {

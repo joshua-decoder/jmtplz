@@ -12,10 +12,10 @@ import joshua.util.io.LineReader;
 
 public class Decode {
 
-  public Decode(Context context, PhraseTable table, String in,
+  public Decode(Context context, PhraseTable table, String source,
       HashMap<String, ScoreHistory> history_map, boolean verbose, OutputStreamWriter out) throws IOException {
 
-    Chart chart = new Chart(table, in, context.GetScorer());
+    Chart chart = new Chart(table, source, context.GetScorer());
     Stacks stacks = new Stacks(context, chart);
     Hypothesis hyp = stacks.End();
     

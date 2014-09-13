@@ -7,7 +7,7 @@ public class Phrase {
 
   // word ids not strings
   private int[] words; // ID* pointer
-
+  
   public Phrase(int word) {
     this.words = new int[] { word };
   }

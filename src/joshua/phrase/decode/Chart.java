@@ -10,18 +10,28 @@ public class Chart {
 
   private int sentence_length;
   private int max_source_phrase_length;
-  private List<TargetPhrases> entries; // Banded array: different source lengths
-                                       // are next to each other.
-
-  public Chart(PhraseTable table, String input, Scorer scorer) {
+  
+  // Banded array: different source lengths are next to each other.
+  private List<TargetPhrases> entries;
+  
+  /* Don't call this */
+  private Chart() {
+  }
+  
+  public Chart(PhraseTable table, String source, Scorer scorer) {
     max_source_phrase_length = table.getMaxSourcePhraseLength();
     List<Integer> words = new ArrayList<Integer>();
-    for (String word : input.split(" ")) {
+
+    for (String word : source.split("\\s+")) {
       words.add(Vocabulary.id(word));
     }
     sentence_length = words.size();
+
+    System.err.println(String.format("Initializing chart of size %d max %d from %s", words.size(), max_source_phrase_length, source));
     
     entries = new ArrayList<TargetPhrases>();
+    for (int i = 0; i < sentence_length * max_source_phrase_length; i++)
+      entries.add(null);
     
     // There's some unreachable ranges off the edge.  Meh.
     //entries_.resize(sentence_length_ * max_source_phrase_length_);
@@ -42,7 +52,7 @@ public class Chart {
     return sentence_length;
   }
 
-  // c++: TODO: make this reflect the longent source phrase for this sentence.
+  // c++: TODO: make this reflect the longest source phrase for this sentence.
   public int MaxSourcePhraseLength() {
     return max_source_phrase_length;
   }
@@ -55,7 +65,12 @@ public class Chart {
   }
 
   private void SetRange(int begin, int end, TargetPhrases to) {
-    entries.set(begin * max_source_phrase_length + end - begin - 1, to);
+    try {
+      entries.set(begin * max_source_phrase_length + end - begin - 1, to);
+    } catch (java.lang.IndexOutOfBoundsException e) {
+      System.err.println(String.format("Whoops! %s [%d-%d] = %d too long (%d)", to, begin, end,
+          begin * max_source_phrase_length + end - begin - 1, entries.size()));
+    }
   }
 
 }
