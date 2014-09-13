@@ -29,7 +29,7 @@ public class PartialEdge extends Header {
     
     between = new ChartState[num_states];
   }
-  
+
   public PartialVertex[] NT() {
     return vertex;
   }

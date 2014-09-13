@@ -1,5 +1,7 @@
 package joshua.phrase.decode;
 
+// PORT: done
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,6 +50,7 @@ public class Future {
     return Entry(0, sentence_length_plus_1 - 1);
   }
 
+  // Calculate change in rest cost when the given coverage is to be covered.                       
   public float Change(Coverage coverage, int begin, int end) {
     int left = coverage.LeftOpen(begin);
     int right = coverage.RightOpen(end, sentence_length_plus_1 - 1);
@@ -55,10 +58,14 @@ public class Future {
   }
   
   private float Entry(int begin, int end) {
+    assert end >= begin;
+    assert end < sentence_length_plus_1;
     return entries.get(begin * sentence_length_plus_1 + end);
   }
   
   private void SetEntry(int begin, int end, float value) { // &float Entry(begin, end)
+    assert end >= begin;
+    assert end < sentence_length_plus_1;
     entries.set(begin * sentence_length_plus_1 + end, value);
   }
 

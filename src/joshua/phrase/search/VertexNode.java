@@ -1,6 +1,6 @@
 package joshua.phrase.search;
 
-// PORT: in progress
+// PORT: done
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -28,7 +28,7 @@ public class VertexNode {
     state = new ChartState();
   }
 
-  public void initRoot() {
+  public void InitRoot() {
     hypos.clear();
   }
 
@@ -41,11 +41,11 @@ public class VertexNode {
     hypos.add(hypo);
   }
   
-  public void appendHypothesis(HypoState hypo) {
+  public void AppendHypothesis(HypoState hypo) {
     hypos.add(hypo);
   }
 
-  public void finishRoot(kPolicy policy) {
+  public void FinishRoot(kPolicy policy) {
     Collections.sort(hypos, new Comparator<HypoState>() {
       public int compare(HypoState a, HypoState b) {
         return a.score > b.score ? 1 : 0; // todo: check correctness
@@ -58,15 +58,14 @@ public class VertexNode {
     state.left.full = false;
     state.left.length = 0;
     state.right.length = 0;
-
     this.rightFull = false;
     this.niceness = 0;
     this.policy = policy;
 
     if (hypos.size() == 1) {
       extend.add(new VertexNode()); // extend.resize(1);
-      extend.get(0).appendHypothesis(hypos.get(0));
-      extend.get(0).finishedAppending((byte) 0, (byte) 0, policy);
+      extend.get(0).AppendHypothesis(hypos.get(0));
+      extend.get(0).FinishedAppending((byte) 0, (byte) 0, policy);
     }
     if (hypos.isEmpty()) {
       bound = Float.NEGATIVE_INFINITY;
@@ -75,7 +74,7 @@ public class VertexNode {
     }
   }
 
-  public void finishedAppending(byte common_left, byte common_right, kPolicy policy) {
+  public void FinishedAppending(byte common_left, byte common_right, kPolicy policy) {
     bound = hypos.get(0).score;
     state = hypos.get(0).state;
     boolean all_full = state.left.full;
@@ -100,7 +99,7 @@ public class VertexNode {
         && ((policy == kPolicy.Left && left.isComplete()) || (policy == kPolicy.Right && right
             .isComplete()))) {
       this.policy = kPolicy.All;
-      // Prioritize revealing the other conctituent.
+      // Prioritize revealing the other constituent.
       this.niceness = (byte) 254;
     } else {
       this.policy = policy;
@@ -120,28 +119,28 @@ public class VertexNode {
       extend.clear();
       for (int i = 0; i < hypos.size(); i++) {
         VertexNode newNode = new VertexNode();
-        newNode.appendHypothesis(hypos.get(i));
+        newNode.AppendHypothesis(hypos.get(i));
         extend.add(newNode);
       }
     }
     for (VertexNode node: extend) {
-      node.finishedAppending(state.left.length, state.right.length, policy);
+      node.FinishedAppending(state.left.length, state.right.length, policy);
     }
   }
 
-  public boolean complete() {
+  public boolean Complete() {
     return hypos.size() == 1 && extend.isEmpty();
   }
 
-  public List<HypoState> getHypos() {
+  public List<HypoState> Hypos() {
     return hypos;
   }
 
-  public int size() {
+  public int Size() {
     return extend.size();
   }
 
-  public float getBound() { // c++: typedef Score
+  public float Bound() { // c++: typedef Score
     return bound;
   }
 
@@ -219,7 +218,7 @@ public class VertexNode {
       long key = divider.divide(node.state);
       lookup.put(key, extend.size());
       if (extend.size() > 0) {
-        extend.get(extend.size() - 1).appendHypothesis(node);
+        extend.get(extend.size() - 1).AppendHypothesis(node);
       } else {
         // extend[res.first->second].AppendHypothesis(*i);
       }                                                                                                     }

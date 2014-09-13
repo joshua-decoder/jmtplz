@@ -82,7 +82,7 @@ public class Decode {
 
   public static void main(String[] args) throws Exception {
     Context context = new Context("lm.kenlm", "weights.txt", new JoshuaConfiguration());
-    PhraseTable ptable = new PhraseTable("phrases.en-it.txt", context.GetScorer());
+    PhraseTable ptable = new PhraseTable("phrases.it-en.txt", context.GetScorer());
     System.err.println("longest source phrase: " + ptable.getMaxSourcePhraseLength());
     HashMap<String, ScoreHistory> map = new HashMap<String, ScoreHistory>();
     boolean verbose = true;

@@ -19,20 +19,7 @@ public class Vertex {
   }
   
   public float Bound() {
-    return root.getBound();
-  }
-  
-  public Note BestChild() {
-    PartialVertex top = new PartialVertex(RootAlternate());
-    if (top.Empty()) {
-      return new Note();
-    } else {
-      PartialVertex continuation = new PartialVertex();
-      while (! top.Complete()) {
-        top.Split(continuation);
-      }
-      return top.End();
-    }
+    return root.Bound();
   }
   
   public VertexNode getRoot() {

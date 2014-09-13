@@ -4,6 +4,18 @@ public class Coverage {
   private int firstZero;
   private long bits;
   
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    
+    long mask = 1L;
+    for (int i = 0; i < 20; i++) {
+      sb.append((bits & mask) > 0 ? "x" : ".");
+      mask <<= 1;
+    }
+    
+    return sb.toString();
+  }
+  
   public Coverage() {
     firstZero = 0;
     bits = 0;
@@ -58,5 +70,24 @@ public class Coverage {
     assert begin >= firstZero;
     assert end - firstZero < 64;
     return (1L << (end - firstZero)) - (1L << (begin - firstZero));
+  }
+  
+  public long getCoverage() {
+    return bits;
+  }
+  
+  @Override
+  public boolean equals(Object obj) {
+    if (obj instanceof Coverage) {
+      Coverage other = (Coverage) obj;
+      return getCoverage() == other.getCoverage() && firstZero() == other.firstZero(); 
+    }
+    
+    return false;
+  }
+  
+  @Override
+  public int hashCode() {
+    return (int)getCoverage() * firstZero();
   }
 }

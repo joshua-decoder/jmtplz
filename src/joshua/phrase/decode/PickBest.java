@@ -1,8 +1,8 @@
 package joshua.phrase.decode;
 
-// PORT: done
+// PORT: done (minus one TODO)
 
-public class PickBest {
+public class PickBest implements Output {
   
   private Stack stack;
   private PartialEdge best;
@@ -10,7 +10,7 @@ public class PickBest {
   public PickBest(Stack stack) {
     this.stack = stack;
     this.stack.clear();
-    this.stack.reserve(1);
+//    this.stack.reserve(1);
     this.best = new PartialEdge();
   }
   

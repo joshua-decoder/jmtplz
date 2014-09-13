@@ -8,7 +8,7 @@ import joshua.phrase.search.IntPair;
 import joshua.phrase.search.Note;
 import joshua.phrase.search.Vertex;
 
-// complete
+// PORT: done
 
 public class Vertices {
   
@@ -19,6 +19,8 @@ public class Vertices {
   public void Add(Hypothesis hypothesis, int source_begin, int source_end, float score_delta) {
     IntPair key = new IntPair(source_begin, source_end);
     Stacks.AddHypothesisToVertex(hypothesis, score_delta, map.get(key));
+    
+    System.err.println(String.format("Adding to vertex %s: %s (%.5f)", key, hypothesis, score_delta));
   }
 
   public void Apply(Chart chart, EdgeGenerator out) {
@@ -27,5 +29,4 @@ public class Vertices {
       Stacks.AddEdge(map.get(pair), chart.Range(pair.first, pair.second).getVertex(), note, out);
     }
   }
-
 }

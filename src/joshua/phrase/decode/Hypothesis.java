@@ -13,6 +13,10 @@ public class Hypothesis {
   private Phrase target;
   private Coverage coverage;
   
+  public String toString() {
+    return String.format("HYP[%s] %.5f %d", coverage, score, last_source_index);
+  }
+  
   public Hypothesis() {
     this.score = 0;
     this.state = new Right();
@@ -67,8 +71,23 @@ public class Hypothesis {
   }
 
   public int lastSourceIndex() {
-    // TODO Auto-generated method stub
-    return 0;
+    return last_source_index;
   }
-
+  
+  @Override
+  public int hashCode() {
+    return LastSourceIndex() * GetCoverage().hashCode() * State().hashCode();
+  }
+  
+  @Override
+  public boolean equals(Object obj) {
+    if (obj instanceof Hypothesis) {
+      Hypothesis other = (Hypothesis) obj;
+      if (LastSourceIndex() == other.LastSourceIndex() &&
+          GetCoverage() == other.GetCoverage() &&
+          State() == other.State())
+        return true;
+    }
+    return false;
+  }
 }

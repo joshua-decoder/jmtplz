@@ -7,10 +7,11 @@ import joshua.Vocabulary;
 
 // Target phrases that correspond to each source span
 public class Chart {
-  
+
   private int sentence_length;
   private int max_source_phrase_length;
-  private List<TargetPhrases> entries; // Banded array: different source lengths are next to each other.
+  private List<TargetPhrases> entries; // Banded array: different source lengths
+                                       // are next to each other.
 
   public Chart(PhraseTable table, String input, Scorer scorer) {
     max_source_phrase_length = table.getMaxSourcePhraseLength();
@@ -24,18 +25,17 @@ public class Chart {
     
     // There's some unreachable ranges off the edge.  Meh.
     //entries_.resize(sentence_length_ * max_source_phrase_length_);
-//    for (int begin = 0; begin != words.size(); ++begin) {
-//      for (int end = begin + 1; (end != words.size() + 1) && (end <= begin + max_source_phrase_length); ++end) {
-//        SetRange(begin, end, table.Phrases(words.get(begin), words.get(0) + end)); // todo
-//      }
-//      if (Range(begin, begin + 1) == null) {
-        // todo
+    for (int begin = 0; begin != words.size(); ++begin) {
+      for (int end = begin + 1; (end != words.size() + 1) && (end <= begin + max_source_phrase_length); ++end) {
+        SetRange(begin, end, table.Phrases(words.subList(begin, end)));
+      }
+      if (Range(begin, begin + 1) == null) {
         // Add passthrough for words not known to the phrase table.
-        //TargetPhrases *pass = passthrough_.construct();
-        //pass->MakePassthrough(passthrough_phrases_, scorer, words[begin]);
-        //SetRange(begin, begin + 1, pass);
-//      }
-//    }
+        TargetPhrases passThrough = new TargetPhrases();
+        passThrough.MakePassThrough(scorer, words.get(begin));
+        SetRange(begin, begin + 1, passThrough);
+      }
+    }
   }
 
   public int SentenceLength() {
@@ -49,10 +49,11 @@ public class Chart {
 
   public TargetPhrases Range(int begin, int end) {
     int index = begin * max_source_phrase_length + end - begin - 1;
-    if (index < 0 || index >= entries.size()) return null;
+    if (index < 0 || index >= entries.size())
+      return null;
     return entries.get(index);
   }
-  
+
   private void SetRange(int begin, int end, TargetPhrases to) {
     entries.set(begin * max_source_phrase_length + end - begin - 1, to);
   }

@@ -13,4 +13,8 @@ public class IntPair {
     this.first = begin;
     this.second = end;
   }
+  
+  public String toString() {
+    return String.format("[%d-%d]", first, second);
+  }
 }

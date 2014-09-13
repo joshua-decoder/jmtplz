@@ -155,6 +155,6 @@ public class KenLM implements NGramLanguageModel, Comparable<KenLM> {
 
   public Right BeginSentenceState() {
     System.err.println("beginSentenceState() not implemented");
-    return null;
+    return new Right();
   }
 }

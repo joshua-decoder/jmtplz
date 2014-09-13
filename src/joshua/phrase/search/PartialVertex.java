@@ -26,7 +26,7 @@ public class PartialVertex {
   }
   
   public boolean Complete() {
-    return back.complete();
+    return back.Complete();
   }
 
   public ChartState State() {
@@ -38,7 +38,7 @@ public class PartialVertex {
   }
 
   public float Bound() {
-    return index > 0 ? back.get(index).getBound() : back.getBound();
+    return index > 0 ? back.get(index).Bound() : back.Bound();
   }
 
   public byte Niceness() { 
@@ -50,7 +50,7 @@ public class PartialVertex {
     assert(!Empty() && !Complete());
     back.BuildExtend();
     boolean ret;
-    if (index + 1 < back.size()) {
+    if (index + 1 < back.Size()) {
       alternative.index = index + 1;
       alternative.back = back;
       ret = true;

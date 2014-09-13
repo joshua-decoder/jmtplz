@@ -3,6 +3,7 @@ package joshua.phrase.decode;
 import java.util.ArrayList;
 import java.util.List;
 
+import joshua.decoder.ff.lm.kenlm.jni.KenLM;
 import joshua.phrase.search.EdgeGenerator;
 import joshua.phrase.search.HypoState;
 import joshua.phrase.search.IntPair;
@@ -10,7 +11,7 @@ import joshua.phrase.search.Note;
 import joshua.phrase.search.Vertex;
 import joshua.phrase.search.kPolicy;
 
-// complete except for resize todo
+// PORT: done (except for resize TODO)
 
 public class Stacks {
 
@@ -37,6 +38,7 @@ public class Stacks {
         int phrase_length = source_words - from;
         // Iterate over antecedents in this stack.
         for (Hypothesis ant : stacks.get(from)) {
+          System.err.println(ant);
           Coverage coverage = ant.GetCoverage();
           int begin = coverage.firstZero();
           int last_end = Math.min(coverage.firstZero() + context.GetConfig().reordering_limit, chart.SentenceLength());
@@ -44,7 +46,11 @@ public class Stacks {
           // We can always go from first_zero because it doesn't create a reordering gap.
           do {
             TargetPhrases phrases = chart.Range(begin, begin + phrase_length);
-            if (phrases == null || !coverage.compatible(begin, begin + phrase_length)) continue;
+            System.err.println(String.format("  Applying target phrases over [%d,%d] = %s", begin, begin + phrase_length, phrases));
+            if (phrases == null || !coverage.compatible(begin, begin + phrase_length)) {
+              System.err.println(String.format("  - no phrases (%s) or incompatible coverage (%s)", phrases, coverage.compatible(begin, begin+ phrase_length)));
+              continue;
+            }
             // distortion etc.
             float score_delta = context.GetScorer().transition(ant, phrases, begin, begin + phrase_length);
             // Future costs: remove span to be filled.
@@ -54,7 +60,7 @@ public class Stacks {
           } while (++begin <= last_begin);
         }
       }
-      EdgeGenerator gen = new EdgeGenerator();
+      EdgeGenerator<KenLM> gen = new EdgeGenerator<KenLM>();
       vertices.Apply(chart, gen);
       //stacks.resize(stacks_.size() + 1); // todo
       //stacks.back().reserve(context.SearchContext().PopLimit()); todo
@@ -82,11 +88,11 @@ public class Stacks {
 
     eos_hypo.history.set(eos_phrase);
     eos_hypo.score = context.GetScorer().LM(eos_phrase.getWords(), eos_hypo.state);
-    eos_vertex.Root().appendHypothesis(eos_hypo);
-    eos_vertex.Root().finishRoot(kPolicy.Left);
+    eos_vertex.Root().AppendHypothesis(eos_hypo);
+    eos_vertex.Root().FinishRoot(kPolicy.Left);
 
     // Add edge that tacks </s> on
-    EdgeGenerator gen = new EdgeGenerator();
+    EdgeGenerator<KenLM> gen = new EdgeGenerator<KenLM>();
     Note note = new Note(new IntPair(chart.SentenceLength(), chart.SentenceLength()));
     Stacks.AddEdge(all_hyps, eos_vertex, note, gen);
 
@@ -108,11 +114,11 @@ public class Stacks {
     add.state.left.length = 0;
     add.state.left.full = true;
     add.score = hypothesis.Score() + score_delta;
-    vertex.Root().appendHypothesis(add);  
+    vertex.Root().AppendHypothesis(add);  
   }
 
   public static void AddEdge(Vertex hypos, Vertex extensions, Note note, EdgeGenerator out) {
-    hypos.Root().finishRoot(kPolicy.Right);
+    hypos.Root().FinishRoot(kPolicy.Right);
     if (hypos.Empty()) return;
     PartialEdge edge = new PartialEdge();
     // Empty LM state before/between/after

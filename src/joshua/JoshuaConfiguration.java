@@ -11,10 +11,9 @@ package joshua;
  */
 public class JoshuaConfiguration {
 
-  public static final int KENLM_MAX_ORDER = 3;
-  
-  public int reordering_limit = 3;
-  public int pop_limit = 0; // todo
+  public int reordering_limit = 5;
+  private int pop_limit = 10;
+  private float lm_weight = 1.0f;
 
   public JoshuaConfiguration() {
   }
@@ -23,5 +22,14 @@ public class JoshuaConfiguration {
   }
 
   public void add_option(String option, boolean required, String comment) {
+  }
+
+  public int PopLimit() {
+    return pop_limit;
+  }
+
+  public float LMWeight() {
+    // TODO Auto-generated method stub
+    return 0;
   }
 }

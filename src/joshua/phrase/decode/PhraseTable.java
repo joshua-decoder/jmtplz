@@ -5,10 +5,12 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import joshua.Vocabulary;
 import joshua.phrase.search.HypoState;
+import joshua.phrase.search.IntPair;
 import joshua.phrase.search.kPolicy;
 
 public class PhraseTable {
@@ -30,7 +32,7 @@ public class PhraseTable {
       long source_text_hash = pipes[0].hashCode(); // todo: murmur hash
       if (source_text_hash != previous_text_hash) {
         if (entry != null)
-          entry.getVertex().getRoot().finishRoot(kPolicy.Left);
+          entry.getVertex().getRoot().FinishRoot(kPolicy.Left);
         source.clear();
         for (String word : pipes[0].split(" ")) {
           source.add(Vocabulary.id(word));
@@ -40,7 +42,7 @@ public class PhraseTable {
           map.put(source, new TargetPhrases());
         entry = map.get(source);
 
-        entry.getVertex().getRoot().initRoot();
+        entry.getVertex().getRoot().InitRoot();
         previous_text_hash = source_text_hash;
       }
       Phrase target = new Phrase(pipes[1].split(" "));
@@ -54,10 +56,10 @@ public class PhraseTable {
           + scorer.LM(target.getWords(), hypo.state) // c++: target.begin(), target.end()
           + scorer.TargetWordCount(target.size());
 
-      entry.getVertex().getRoot().appendHypothesis(hypo);
+      entry.getVertex().getRoot().AppendHypothesis(hypo);
     }
     if (entry != null)
-      entry.getVertex().getRoot().finishRoot(kPolicy.Left);
+      entry.getVertex().getRoot().FinishRoot(kPolicy.Left);
     br.close();
   }
 
@@ -65,7 +67,7 @@ public class PhraseTable {
     return maxSourcePhraseLength;
   }
   
-  public TargetPhrases Phrases(Long long1, long l) {
-    return null; // todo
+  public TargetPhrases Phrases(List<Integer> sourceWords) {
+    return map.get(sourceWords);
   }
 }
